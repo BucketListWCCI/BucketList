@@ -7,5 +7,15 @@ namespace BucketList.Models
 {
     public class Shopping
     {
+
+        public int ShoppingId { get; set; }
+        public int MyProperty { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string ShoppingType { get; set; }
+        public ApplicationUser Id { get; set; }
+        public bool Complete { get; set; }
+        
+
     }
 }
