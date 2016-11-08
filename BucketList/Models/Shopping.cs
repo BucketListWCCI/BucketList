@@ -13,8 +13,9 @@ namespace BucketList.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string ShoppingType { get; set; }
+        public string Location { get; set; }
         public ApplicationUser Id { get; set; }
-        public bool Complete { get; set; }
+        public bool IsComplete { get; set; }
         
 
     }
