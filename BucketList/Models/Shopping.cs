@@ -9,11 +9,11 @@ namespace BucketList.Models
     {
 
         public int ShoppingId { get; set; }
-        public int MyProperty { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string ShoppingType { get; set; }
         public string Location { get; set; }
+        public string Link { get; set; }
         public ApplicationUser Id { get; set; }
         public bool IsComplete { get; set; }
         
