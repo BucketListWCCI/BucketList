@@ -33,5 +33,7 @@ namespace BucketList.Models
         }
 
         public System.Data.Entity.DbSet<BucketList.Models.Shopping> Shoppings { get; set; }
+
+        public System.Data.Entity.DbSet<BucketList.Models.Restaurant> Restaurants { get; set; }
     }
 }
