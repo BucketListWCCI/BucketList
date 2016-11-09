@@ -54,15 +54,15 @@ namespace BucketList
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "252691675146260",
+               appSecret: "323bd347b6438bef8745610880715085");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "741443471331-en0r7bilsch6v6d1pdqj30ngopp929o8.apps.googleusercontent.com",
+                ClientSecret = "c9I6SmBFb7F9nidTSidTUldu"
+            });
         }
     }
 }
