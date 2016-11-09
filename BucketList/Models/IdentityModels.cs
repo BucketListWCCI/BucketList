@@ -38,5 +38,9 @@ namespace BucketList.Models
         }
 
         public System.Data.Entity.DbSet<BucketList.Models.Shopping> Shoppings { get; set; }
+
+        public System.Data.Entity.DbSet<BucketList.Models.restaurants> restaurants { get; set; }
+
+        // public System.Data.Entity.DbSet<BucketList.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

@@ -10,107 +10,107 @@ using BucketList.Models;
 
 namespace BucketList.Controllers
 {
-    public class ShoppingsController : Controller
+    public class restaurantsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Shoppings
+        // GET: restaurants
         public ActionResult Index()
         {
-            return View(db.Shoppings.ToList());
+            return View(db.restaurants.ToList());
         }
 
-        // GET: Shoppings/Details/5
+        // GET: restaurants/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Shopping shopping = db.Shoppings.Find(id);
-            if (shopping == null)
+            restaurants restaurants = db.restaurants.Find(id);
+            if (restaurants == null)
             {
                 return HttpNotFound();
             }
-            return View(shopping);
+            return View(restaurants);
         }
 
-        // GET: Shoppings/Create
+        // GET: restaurants/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Shoppings/Create
+        // POST: restaurants/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ShoppingId,Title,Description,ShoppingType,Location,Link,IsComplete,ApplicatinUserID")] Shopping shopping)
+        public ActionResult Create([Bind(Include = "RestaurantId,Title,Description,RestaurantType,Link,Location,RestaurantsIsComplete")] restaurants restaurants)
         {
             if (ModelState.IsValid)
             {
-                db.Shoppings.Add(shopping);
+                db.restaurants.Add(restaurants);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(shopping);
+            return View(restaurants);
         }
 
-        // GET: Shoppings/Edit/5
+        // GET: restaurants/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Shopping shopping = db.Shoppings.Find(id);
-            if (shopping == null)
+            restaurants restaurants = db.restaurants.Find(id);
+            if (restaurants == null)
             {
                 return HttpNotFound();
             }
-            return View(shopping);
+            return View(restaurants);
         }
 
-        // POST: Shoppings/Edit/5
+        // POST: restaurants/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ShoppingId,Title,Description,ShoppingType,Location,Link,IsComplete,ApplicatinUserID")] Shopping shopping)
+        public ActionResult Edit([Bind(Include = "RestaurantId,Title,Description,RestaurantType,Link,Location,RestaurantsIsComplete")] restaurants restaurants)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(shopping).State = EntityState.Modified;
+                db.Entry(restaurants).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(shopping);
+            return View(restaurants);
         }
 
-        // GET: Shoppings/Delete/5
+        // GET: restaurants/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Shopping shopping = db.Shoppings.Find(id);
-            if (shopping == null)
+            restaurants restaurants = db.restaurants.Find(id);
+            if (restaurants == null)
             {
                 return HttpNotFound();
             }
-            return View(shopping);
+            return View(restaurants);
         }
 
-        // POST: Shoppings/Delete/5
+        // POST: restaurants/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Shopping shopping = db.Shoppings.Find(id);
-            db.Shoppings.Remove(shopping);
+            restaurants restaurants = db.restaurants.Find(id);
+            db.restaurants.Remove(restaurants);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

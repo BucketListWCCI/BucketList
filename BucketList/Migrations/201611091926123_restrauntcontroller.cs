@@ -3,25 +3,24 @@ namespace BucketList.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CreatedController : DbMigration
+    public partial class restrauntcontroller : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Shoppings",
+                "dbo.restaurants",
                 c => new
                     {
-                        ShoppingId = c.Int(nullable: false, identity: true),
+                        RestaurantId = c.Int(nullable: false, identity: true),
                         Title = c.String(),
                         Description = c.String(),
-                        ShoppingType = c.String(),
-                        Location = c.String(),
+                        RestaurantType = c.String(),
                         Link = c.String(),
-                        IsComplete = c.Boolean(nullable: false),
-                        ApplicatinUserID = c.String(),
+                        Location = c.String(),
+                        RestaurantsIsComplete = c.Boolean(nullable: false),
                         User_Id = c.String(maxLength: 128),
                     })
-                .PrimaryKey(t => t.ShoppingId)
+                .PrimaryKey(t => t.RestaurantId)
                 .ForeignKey("dbo.AspNetUsers", t => t.User_Id)
                 .Index(t => t.User_Id);
             
@@ -29,9 +28,9 @@ namespace BucketList.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Shoppings", "User_Id", "dbo.AspNetUsers");
-            DropIndex("dbo.Shoppings", new[] { "User_Id" });
-            DropTable("dbo.Shoppings");
+            DropForeignKey("dbo.restaurants", "User_Id", "dbo.AspNetUsers");
+            DropIndex("dbo.restaurants", new[] { "User_Id" });
+            DropTable("dbo.restaurants");
         }
     }
 }

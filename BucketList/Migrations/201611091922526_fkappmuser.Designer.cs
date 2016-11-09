@@ -7,13 +7,13 @@ namespace BucketList.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AnotherAttemptAtForeignKey : IMigrationMetadata
+    public sealed partial class fkappmuser : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AnotherAttemptAtForeignKey));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(fkappmuser));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611082324201_AnotherAttemptAtForeignKey"; }
+            get { return "201611091922526_fkappmuser"; }
         }
         
         string IMigrationMetadata.Source

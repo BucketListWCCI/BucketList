@@ -1,4 +1,4 @@
-﻿@model BucketList.Models.Shopping
+﻿@model BucketList.Models.restaurants
 
 @{
     ViewBag.Title = "Details";
@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Shopping</h4>
+    <h4>restaurants</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -27,19 +27,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ShoppingType)
+            @Html.DisplayNameFor(model => model.RestaurantType)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ShoppingType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Location)
+            @Html.DisplayFor(model => model.RestaurantType)
         </dd>
 
         <dt>
@@ -51,24 +43,24 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.IsComplete)
+            @Html.DisplayNameFor(model => model.Location)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.IsComplete)
+            @Html.DisplayFor(model => model.Location)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ApplicatinUserID)
+            @Html.DisplayNameFor(model => model.RestaurantsIsComplete)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ApplicatinUserID)
+            @Html.DisplayFor(model => model.RestaurantsIsComplete)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ShoppingId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RestaurantId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

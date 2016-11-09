@@ -7,13 +7,13 @@ namespace BucketList.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddedShoppingModel : IMigrationMetadata
+    public sealed partial class restrauntcontroller : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedShoppingModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(restrauntcontroller));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611082105439_AddedShoppingModel"; }
+            get { return "201611091926123_restrauntcontroller"; }
         }
         
         string IMigrationMetadata.Source

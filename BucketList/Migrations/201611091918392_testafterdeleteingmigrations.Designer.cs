@@ -7,13 +7,13 @@ namespace BucketList.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UpdatedShoppingClass : IMigrationMetadata
+    public sealed partial class testafterdeleteingmigrations : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdatedShoppingClass));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(testafterdeleteingmigrations));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611082237106_UpdatedShoppingClass"; }
+            get { return "201611091918392_testafterdeleteingmigrations"; }
         }
         
         string IMigrationMetadata.Source
