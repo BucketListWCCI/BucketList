@@ -19,6 +19,6 @@ namespace BucketList.Models
         public virtual ApplicationUser Id { get; set; }
         public bool IsComplete { get; set; }
         
-
+        //Random comment for testing git purposes
     }
 }
