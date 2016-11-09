@@ -31,5 +31,7 @@ namespace BucketList.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BucketList.Models.Shopping> Shoppings { get; set; }
     }
 }

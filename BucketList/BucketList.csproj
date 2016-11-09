@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ShoppingsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -217,6 +218,14 @@
     <Compile Include="Migrations\201611082326144_SwitchedBackToId.cs" />
     <Compile Include="Migrations\201611082326144_SwitchedBackToId.Designer.cs">
       <DependentUpon>201611082326144_SwitchedBackToId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611091459312_Testing.cs" />
+    <Compile Include="Migrations\201611091459312_Testing.Designer.cs">
+      <DependentUpon>201611091459312_Testing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611091502259_CreatedController.cs" />
+    <Compile Include="Migrations\201611091502259_CreatedController.Designer.cs">
+      <DependentUpon>201611091502259_CreatedController.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -301,6 +310,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\Shoppings\Create.cshtml" />
+    <Content Include="Views\Shoppings\Delete.cshtml" />
+    <Content Include="Views\Shoppings\Details.cshtml" />
+    <Content Include="Views\Shoppings\Edit.cshtml" />
+    <Content Include="Views\Shoppings\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -321,6 +335,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611082326144_SwitchedBackToId.resx">
       <DependentUpon>201611082326144_SwitchedBackToId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611091459312_Testing.resx">
+      <DependentUpon>201611091459312_Testing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611091502259_CreatedController.resx">
+      <DependentUpon>201611091502259_CreatedController.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
