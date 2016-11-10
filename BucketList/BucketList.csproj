@@ -197,9 +197,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\entertainmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\museumsController.cs" />
     <Compile Include="Controllers\restaurantsController.cs" />
+    <Compile Include="Controllers\ShoppingsController.cs" />
+    <Compile Include="Controllers\sportsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,12 +219,39 @@
     <Compile Include="Migrations\201611091926123_restrauntcontroller.Designer.cs">
       <DependentUpon>201611091926123_restrauntcontroller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611100023220_addmuseummodel.cs" />
+    <Compile Include="Migrations\201611100023220_addmuseummodel.Designer.cs">
+      <DependentUpon>201611100023220_addmuseummodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611100026092_addmuseumcontroller.cs" />
+    <Compile Include="Migrations\201611100026092_addmuseumcontroller.Designer.cs">
+      <DependentUpon>201611100026092_addmuseumcontroller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611100035506_addentertainmentmodel.cs" />
+    <Compile Include="Migrations\201611100035506_addentertainmentmodel.Designer.cs">
+      <DependentUpon>201611100035506_addentertainmentmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611100037433_addentertainmentcontroller.cs" />
+    <Compile Include="Migrations\201611100037433_addentertainmentcontroller.Designer.cs">
+      <DependentUpon>201611100037433_addentertainmentcontroller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611100043134_addsportsmodel.cs" />
+    <Compile Include="Migrations\201611100043134_addsportsmodel.Designer.cs">
+      <DependentUpon>201611100043134_addsportsmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611100044314_addsportscontroller.cs" />
+    <Compile Include="Migrations\201611100044314_addsportscontroller.Designer.cs">
+      <DependentUpon>201611100044314_addsportscontroller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\entertainment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\museum.cs" />
     <Compile Include="Models\restaurants.cs" />
     <Compile Include="Models\Shopping.cs" />
+    <Compile Include="Models\sports.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -304,6 +335,26 @@
     <Content Include="Views\restaurants\Details.cshtml" />
     <Content Include="Views\restaurants\Edit.cshtml" />
     <Content Include="Views\restaurants\Index.cshtml" />
+    <Content Include="Views\Shoppings\Create.cshtml" />
+    <Content Include="Views\Shoppings\Delete.cshtml" />
+    <Content Include="Views\Shoppings\Details.cshtml" />
+    <Content Include="Views\Shoppings\Edit.cshtml" />
+    <Content Include="Views\Shoppings\Index.cshtml" />
+    <Content Include="Views\museums\Create.cshtml" />
+    <Content Include="Views\museums\Delete.cshtml" />
+    <Content Include="Views\museums\Details.cshtml" />
+    <Content Include="Views\museums\Edit.cshtml" />
+    <Content Include="Views\museums\Index.cshtml" />
+    <Content Include="Views\entertainments\Create.cshtml" />
+    <Content Include="Views\entertainments\Delete.cshtml" />
+    <Content Include="Views\entertainments\Details.cshtml" />
+    <Content Include="Views\entertainments\Edit.cshtml" />
+    <Content Include="Views\entertainments\Index.cshtml" />
+    <Content Include="Views\sports\Create.cshtml" />
+    <Content Include="Views\sports\Delete.cshtml" />
+    <Content Include="Views\sports\Details.cshtml" />
+    <Content Include="Views\sports\Edit.cshtml" />
+    <Content Include="Views\sports\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -321,6 +372,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611091926123_restrauntcontroller.resx">
       <DependentUpon>201611091926123_restrauntcontroller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611100023220_addmuseummodel.resx">
+      <DependentUpon>201611100023220_addmuseummodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611100026092_addmuseumcontroller.resx">
+      <DependentUpon>201611100026092_addmuseumcontroller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611100035506_addentertainmentmodel.resx">
+      <DependentUpon>201611100035506_addentertainmentmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611100037433_addentertainmentcontroller.resx">
+      <DependentUpon>201611100037433_addentertainmentcontroller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611100043134_addsportsmodel.resx">
+      <DependentUpon>201611100043134_addsportsmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611100044314_addsportscontroller.resx">
+      <DependentUpon>201611100044314_addsportscontroller.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
