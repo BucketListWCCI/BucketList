@@ -10,6 +10,7 @@ namespace BucketList.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "BucketList.Models.ApplicationDbContext";
         }
 
         protected override void Seed(BucketList.Models.ApplicationDbContext context)
