@@ -7,13 +7,13 @@ namespace BucketList.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class DeletedOldMigrations : IMigrationMetadata
+    public sealed partial class deletedatabasetofixloginprobs : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DeletedOldMigrations));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(deletedatabasetofixloginprobs));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611101922325_DeletedOldMigrations"; }
+            get { return "201611111906564_delete data base to fix login probs"; }
         }
         
         string IMigrationMetadata.Source
