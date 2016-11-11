@@ -207,41 +207,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611091918392_testafterdeleteingmigrations.cs" />
-    <Compile Include="Migrations\201611091918392_testafterdeleteingmigrations.Designer.cs">
-      <DependentUpon>201611091918392_testafterdeleteingmigrations.cs</DependentUpon>
+    <Compile Include="Migrations\201611101919157_InitialCreate.cs" />
+    <Compile Include="Migrations\201611101919157_InitialCreate.Designer.cs">
+      <DependentUpon>201611101919157_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611091922526_fkappmuser.cs" />
-    <Compile Include="Migrations\201611091922526_fkappmuser.Designer.cs">
-      <DependentUpon>201611091922526_fkappmuser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611091926123_restrauntcontroller.cs" />
-    <Compile Include="Migrations\201611091926123_restrauntcontroller.Designer.cs">
-      <DependentUpon>201611091926123_restrauntcontroller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611100023220_addmuseummodel.cs" />
-    <Compile Include="Migrations\201611100023220_addmuseummodel.Designer.cs">
-      <DependentUpon>201611100023220_addmuseummodel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611100026092_addmuseumcontroller.cs" />
-    <Compile Include="Migrations\201611100026092_addmuseumcontroller.Designer.cs">
-      <DependentUpon>201611100026092_addmuseumcontroller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611100035506_addentertainmentmodel.cs" />
-    <Compile Include="Migrations\201611100035506_addentertainmentmodel.Designer.cs">
-      <DependentUpon>201611100035506_addentertainmentmodel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611100037433_addentertainmentcontroller.cs" />
-    <Compile Include="Migrations\201611100037433_addentertainmentcontroller.Designer.cs">
-      <DependentUpon>201611100037433_addentertainmentcontroller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611100043134_addsportsmodel.cs" />
-    <Compile Include="Migrations\201611100043134_addsportsmodel.Designer.cs">
-      <DependentUpon>201611100043134_addsportsmodel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611100044314_addsportscontroller.cs" />
-    <Compile Include="Migrations\201611100044314_addsportscontroller.Designer.cs">
-      <DependentUpon>201611100044314_addsportscontroller.cs</DependentUpon>
+    <Compile Include="Migrations\201611101922325_DeletedOldMigrations.cs" />
+    <Compile Include="Migrations\201611101922325_DeletedOldMigrations.Designer.cs">
+      <DependentUpon>201611101922325_DeletedOldMigrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -364,32 +336,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611091918392_testafterdeleteingmigrations.resx">
-      <DependentUpon>201611091918392_testafterdeleteingmigrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611101919157_InitialCreate.resx">
+      <DependentUpon>201611101919157_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611091922526_fkappmuser.resx">
-      <DependentUpon>201611091922526_fkappmuser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611091926123_restrauntcontroller.resx">
-      <DependentUpon>201611091926123_restrauntcontroller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611100023220_addmuseummodel.resx">
-      <DependentUpon>201611100023220_addmuseummodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611100026092_addmuseumcontroller.resx">
-      <DependentUpon>201611100026092_addmuseumcontroller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611100035506_addentertainmentmodel.resx">
-      <DependentUpon>201611100035506_addentertainmentmodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611100037433_addentertainmentcontroller.resx">
-      <DependentUpon>201611100037433_addentertainmentcontroller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611100043134_addsportsmodel.resx">
-      <DependentUpon>201611100043134_addsportsmodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611100044314_addsportscontroller.resx">
-      <DependentUpon>201611100044314_addsportscontroller.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611101922325_DeletedOldMigrations.resx">
+      <DependentUpon>201611101922325_DeletedOldMigrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
