@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace BucketList.Models
 {
     public class Entertainment
@@ -14,7 +16,10 @@ namespace BucketList.Models
         public string Link { get; set; }
         public string Location { get; set; }
         public string EntertainmentIsComplete { get; set; }
-
         public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
+
+        [ForeignKey("Entertainment")]
+        public int EntertainmentTypeId { get; set; }
+        public string EnterainmentType { get; set; }
     }
 }
