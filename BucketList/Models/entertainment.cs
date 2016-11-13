@@ -17,7 +17,7 @@ namespace BucketList.Models
         public string Location { get; set; }
         public string EntertainmentIsComplete { get; set; }
         public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
-        public virtual int EntertainmentTypeId { get; set; }
+        public virtual EntertainmentType EntertainmentTypeId { get; set; }
 
     }
 }

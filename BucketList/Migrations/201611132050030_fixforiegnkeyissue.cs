@@ -3,7 +3,7 @@ namespace BucketList.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class createentertainmenttype : DbMigration
+    public partial class fixforiegnkeyissue : DbMigration
     {
         public override void Up()
         {
@@ -17,12 +17,23 @@ namespace BucketList.Migrations
                         Link = c.String(),
                         Location = c.String(),
                         EntertainmentIsComplete = c.String(),
-                        EntertainmentTypeId = c.Int(nullable: false),
+                        EntertainmentTypeId_EntertainmentTypeId = c.Int(),
                         User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.EntertainmentId)
+                .ForeignKey("dbo.EntertainmentTypes", t => t.EntertainmentTypeId_EntertainmentTypeId)
                 .ForeignKey("dbo.AspNetUsers", t => t.User_Id)
+                .Index(t => t.EntertainmentTypeId_EntertainmentTypeId)
                 .Index(t => t.User_Id);
+            
+            CreateTable(
+                "dbo.EntertainmentTypes",
+                c => new
+                    {
+                        EntertainmentTypeId = c.Int(nullable: false, identity: true),
+                        EntertainmentsType = c.String(),
+                    })
+                .PrimaryKey(t => t.EntertainmentTypeId);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -95,11 +106,23 @@ namespace BucketList.Migrations
                         Link = c.String(),
                         Location = c.String(),
                         MuseumIsComplete = c.Boolean(nullable: false),
+                        MuseumTypeId_MuseumTypeId = c.Int(),
                         User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.MuseumId)
+                .ForeignKey("dbo.MuseumTypes", t => t.MuseumTypeId_MuseumTypeId)
                 .ForeignKey("dbo.AspNetUsers", t => t.User_Id)
+                .Index(t => t.MuseumTypeId_MuseumTypeId)
                 .Index(t => t.User_Id);
+            
+            CreateTable(
+                "dbo.MuseumTypes",
+                c => new
+                    {
+                        MuseumTypeId = c.Int(nullable: false, identity: true),
+                        MuseumsType = c.String(),
+                    })
+                .PrimaryKey(t => t.MuseumTypeId);
             
             CreateTable(
                 "dbo.Restaurants",
@@ -167,30 +190,36 @@ namespace BucketList.Migrations
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.Restaurants", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.Museums", "User_Id", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Museums", "MuseumTypeId_MuseumTypeId", "dbo.MuseumTypes");
             DropForeignKey("dbo.Entertainments", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Entertainments", "EntertainmentTypeId_EntertainmentTypeId", "dbo.EntertainmentTypes");
             DropIndex("dbo.Sports", new[] { "User_Id" });
             DropIndex("dbo.Shoppings", new[] { "User_Id" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.Restaurants", new[] { "User_Id" });
             DropIndex("dbo.Museums", new[] { "User_Id" });
+            DropIndex("dbo.Museums", new[] { "MuseumTypeId_MuseumTypeId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.Entertainments", new[] { "User_Id" });
+            DropIndex("dbo.Entertainments", new[] { "EntertainmentTypeId_EntertainmentTypeId" });
             DropTable("dbo.Sports");
             DropTable("dbo.Shoppings");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Restaurants");
+            DropTable("dbo.MuseumTypes");
             DropTable("dbo.Museums");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
+            DropTable("dbo.EntertainmentTypes");
             DropTable("dbo.Entertainments");
         }
     }

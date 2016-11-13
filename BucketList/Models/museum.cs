@@ -16,6 +16,6 @@ namespace BucketList.Models
         public string Location { get; set; }
         public bool MuseumIsComplete { get; set; }
         public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
-
+        public virtual MuseumType MuseumTypeId { get; set; }
     }
 }

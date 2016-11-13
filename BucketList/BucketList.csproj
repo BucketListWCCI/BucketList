@@ -202,19 +202,16 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MuseumsController.cs" />
+    <Compile Include="Controllers\MuseumTypesController.cs" />
     <Compile Include="Controllers\RestaurantsController.cs" />
     <Compile Include="Controllers\ShoppingsController.cs" />
     <Compile Include="Controllers\SportsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611132028533_createentertainmenttype.cs" />
-    <Compile Include="Migrations\201611132028533_createentertainmenttype.Designer.cs">
-      <DependentUpon>201611132028533_createentertainmenttype.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611132031421_createenter-typecontroller.cs" />
-    <Compile Include="Migrations\201611132031421_createenter-typecontroller.Designer.cs">
-      <DependentUpon>201611132031421_createenter-typecontroller.cs</DependentUpon>
+    <Compile Include="Migrations\201611132050030_fixforiegnkeyissue.cs" />
+    <Compile Include="Migrations\201611132050030_fixforiegnkeyissue.Designer.cs">
+      <DependentUpon>201611132050030_fixforiegnkeyissue.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -223,6 +220,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Museum.cs" />
+    <Compile Include="Models\MuseumType.cs" />
     <Compile Include="Models\Restaurants.cs" />
     <Compile Include="Models\Shopping.cs" />
     <Compile Include="Models\Sports.cs" />
@@ -334,6 +332,11 @@
     <Content Include="Views\EntertainmentTypes\Details.cshtml" />
     <Content Include="Views\EntertainmentTypes\Edit.cshtml" />
     <Content Include="Views\EntertainmentTypes\Index.cshtml" />
+    <Content Include="Views\MuseumTypes\Create.cshtml" />
+    <Content Include="Views\MuseumTypes\Delete.cshtml" />
+    <Content Include="Views\MuseumTypes\Details.cshtml" />
+    <Content Include="Views\MuseumTypes\Edit.cshtml" />
+    <Content Include="Views\MuseumTypes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -343,11 +346,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611132028533_createentertainmenttype.resx">
-      <DependentUpon>201611132028533_createentertainmenttype.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611132031421_createenter-typecontroller.resx">
-      <DependentUpon>201611132031421_createenter-typecontroller.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611132050030_fixforiegnkeyissue.resx">
+      <DependentUpon>201611132050030_fixforiegnkeyissue.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

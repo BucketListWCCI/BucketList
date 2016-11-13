@@ -7,13 +7,13 @@ namespace BucketList.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class createentertypecontroller : IMigrationMetadata
+    public sealed partial class fixforiegnkeyissue : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(createentertypecontroller));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(fixforiegnkeyissue));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611132031421_createenter-typecontroller"; }
+            get { return "201611132050030_fixforiegnkeyissue"; }
         }
         
         string IMigrationMetadata.Source
