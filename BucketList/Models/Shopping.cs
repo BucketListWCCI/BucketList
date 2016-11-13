@@ -17,7 +17,7 @@ namespace BucketList.Models
         public string Link { get; set; }
         public bool IsComplete { get; set; }
         public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
-
+        public virtual ShoppingType ShoppingTypeID { get; set; }
 
 
 
