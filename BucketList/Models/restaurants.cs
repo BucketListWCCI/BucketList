@@ -17,7 +17,7 @@ namespace BucketList.Models
         public string Location { get; set; }
         public bool RestaurantsIsComplete { get; set; }
         public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
-       
+        public virtual RestraurantType RestraurantTypeId { get; set; }
 
     }
 }

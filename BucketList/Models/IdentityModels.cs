@@ -51,6 +51,8 @@ namespace BucketList.Models
 
         public System.Data.Entity.DbSet<BucketList.Models.MuseumType> MuseumTypes { get; set; }
 
+        public System.Data.Entity.DbSet<BucketList.Models.RestraurantType> RestraurantTypes { get; set; }
+
         // public System.Data.Entity.DbSet<BucketList.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

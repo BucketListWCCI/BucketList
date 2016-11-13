@@ -204,6 +204,7 @@
     <Compile Include="Controllers\MuseumsController.cs" />
     <Compile Include="Controllers\MuseumTypesController.cs" />
     <Compile Include="Controllers\RestaurantsController.cs" />
+    <Compile Include="Controllers\RestraurantTypesController.cs" />
     <Compile Include="Controllers\ShoppingsController.cs" />
     <Compile Include="Controllers\SportsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,6 +213,14 @@
     <Compile Include="Migrations\201611132050030_fixforiegnkeyissue.cs" />
     <Compile Include="Migrations\201611132050030_fixforiegnkeyissue.Designer.cs">
       <DependentUpon>201611132050030_fixforiegnkeyissue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611132102199_restraunttypemodel.cs" />
+    <Compile Include="Migrations\201611132102199_restraunttypemodel.Designer.cs">
+      <DependentUpon>201611132102199_restraunttypemodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611132143486_restraunttypecontroller.cs" />
+    <Compile Include="Migrations\201611132143486_restraunttypecontroller.Designer.cs">
+      <DependentUpon>201611132143486_restraunttypecontroller.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -222,6 +231,7 @@
     <Compile Include="Models\Museum.cs" />
     <Compile Include="Models\MuseumType.cs" />
     <Compile Include="Models\Restaurants.cs" />
+    <Compile Include="Models\RestraurantType.cs" />
     <Compile Include="Models\Shopping.cs" />
     <Compile Include="Models\Sports.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -337,6 +347,11 @@
     <Content Include="Views\MuseumTypes\Details.cshtml" />
     <Content Include="Views\MuseumTypes\Edit.cshtml" />
     <Content Include="Views\MuseumTypes\Index.cshtml" />
+    <Content Include="Views\RestraurantTypes\Create.cshtml" />
+    <Content Include="Views\RestraurantTypes\Delete.cshtml" />
+    <Content Include="Views\RestraurantTypes\Details.cshtml" />
+    <Content Include="Views\RestraurantTypes\Edit.cshtml" />
+    <Content Include="Views\RestraurantTypes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -348,6 +363,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611132050030_fixforiegnkeyissue.resx">
       <DependentUpon>201611132050030_fixforiegnkeyissue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611132102199_restraunttypemodel.resx">
+      <DependentUpon>201611132102199_restraunttypemodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611132143486_restraunttypecontroller.resx">
+      <DependentUpon>201611132143486_restraunttypecontroller.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
