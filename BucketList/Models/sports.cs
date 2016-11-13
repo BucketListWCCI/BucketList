@@ -16,6 +16,6 @@ namespace BucketList.Models
         public string Link { get; set; }
         public string SportsIsComplete { get; set; }
         public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
-
+        public virtual SportsType SportsTypeId { get; set;}
     }
 }
