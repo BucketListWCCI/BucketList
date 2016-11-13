@@ -197,8 +197,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EntertainmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MuseumsController.cs" />
+    <Compile Include="Controllers\RestaurantsController.cs" />
+    <Compile Include="Controllers\ShoppingsController.cs" />
+    <Compile Include="Controllers\SportsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -333,6 +338,31 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\Entertainments\Create.cshtml" />
+    <Content Include="Views\Entertainments\Delete.cshtml" />
+    <Content Include="Views\Entertainments\Details.cshtml" />
+    <Content Include="Views\Entertainments\Edit.cshtml" />
+    <Content Include="Views\Entertainments\Index.cshtml" />
+    <Content Include="Views\Museums\Create.cshtml" />
+    <Content Include="Views\Museums\Delete.cshtml" />
+    <Content Include="Views\Museums\Details.cshtml" />
+    <Content Include="Views\Museums\Edit.cshtml" />
+    <Content Include="Views\Museums\Index.cshtml" />
+    <Content Include="Views\Restaurants\Create.cshtml" />
+    <Content Include="Views\Restaurants\Delete.cshtml" />
+    <Content Include="Views\Restaurants\Details.cshtml" />
+    <Content Include="Views\Restaurants\Edit.cshtml" />
+    <Content Include="Views\Restaurants\Index.cshtml" />
+    <Content Include="Views\Shoppings\Create.cshtml" />
+    <Content Include="Views\Shoppings\Delete.cshtml" />
+    <Content Include="Views\Shoppings\Details.cshtml" />
+    <Content Include="Views\Shoppings\Edit.cshtml" />
+    <Content Include="Views\Shoppings\Index.cshtml" />
+    <Content Include="Views\Sports\Create.cshtml" />
+    <Content Include="Views\Sports\Delete.cshtml" />
+    <Content Include="Views\Sports\Details.cshtml" />
+    <Content Include="Views\Sports\Edit.cshtml" />
+    <Content Include="Views\Sports\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
