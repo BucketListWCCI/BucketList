@@ -13,12 +13,11 @@ namespace BucketList.Models
         public int ShoppingId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public string ShoppingType { get; set; }
         public string Location { get; set; }
         public string Link { get; set; }
         public bool IsComplete { get; set; }
         public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
-
+        public virtual ShoppingType ShoppingTypeID { get; set; }
 
 
 
