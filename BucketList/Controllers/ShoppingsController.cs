@@ -46,7 +46,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ShoppingId,Title,Description,ShoppingType,Location,Link,IsComplete")] Shopping shopping)
+        public ActionResult Create([Bind(Include = "ShoppingId,Title,Description,Location,Link,IsComplete")] Shopping shopping)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ShoppingId,Title,Description,ShoppingType,Location,Link,IsComplete")] Shopping shopping)
+        public ActionResult Edit([Bind(Include = "ShoppingId,Title,Description,Location,Link,IsComplete")] Shopping shopping)
         {
             if (ModelState.IsValid)
             {

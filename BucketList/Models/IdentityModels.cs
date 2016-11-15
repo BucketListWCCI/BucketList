@@ -39,13 +39,23 @@ namespace BucketList.Models
 
         public System.Data.Entity.DbSet<BucketList.Models.Shopping> Shoppings { get; set; }
 
-        public System.Data.Entity.DbSet<BucketList.Models.restaurants> restaurants { get; set; }
+        public System.Data.Entity.DbSet<BucketList.Models.Restaurants> restaurants { get; set; }
 
-        public System.Data.Entity.DbSet<BucketList.Models.museum> museums { get; set; }
+        public System.Data.Entity.DbSet<BucketList.Models.Museum> museums { get; set; }
 
-        public System.Data.Entity.DbSet<BucketList.Models.entertainment> entertainments { get; set; }
+        public System.Data.Entity.DbSet<BucketList.Models.Entertainment> entertainments { get; set; }
 
-        public System.Data.Entity.DbSet<BucketList.Models.sports> sports { get; set; }
+        public System.Data.Entity.DbSet<BucketList.Models.Sports> sports { get; set; }
+
+        public System.Data.Entity.DbSet<BucketList.Models.EntertainmentType> EntertainmentTypes { get; set; }
+
+        public System.Data.Entity.DbSet<BucketList.Models.MuseumType> MuseumTypes { get; set; }
+
+        public System.Data.Entity.DbSet<BucketList.Models.RestraurantType> RestraurantTypes { get; set; }
+
+        public System.Data.Entity.DbSet<BucketList.Models.ShoppingType> ShoppingTypes { get; set; }
+
+        public System.Data.Entity.DbSet<BucketList.Models.SportsType> SportsTypes { get; set; }
 
         // public System.Data.Entity.DbSet<BucketList.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
