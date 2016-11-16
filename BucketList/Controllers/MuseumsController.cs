@@ -17,7 +17,8 @@ namespace BucketList.Controllers
         // GET: Museums
         public ActionResult Index()
         {
-            return View(db.museums.ToList());
+            var museums = db.museums.Include(m => m.MuseumsType);
+            return View(museums.ToList());
         }
 
         // GET: Museums/Details/5
@@ -38,6 +39,7 @@ namespace BucketList.Controllers
         // GET: Museums/Create
         public ActionResult Create()
         {
+            ViewBag.MuseumTypeId = new SelectList(db.MuseumTypes, "MuseumTypeId", "MuseumsType");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MuseumId,Title,Description,Link,Location,MuseumIsComplete")] Museum museum)
+        public ActionResult Create([Bind(Include = "MuseumId,Title,Description,Link,Location,MuseumTypeId")] Museum museum)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace BucketList.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.MuseumTypeId = new SelectList(db.MuseumTypes, "MuseumTypeId", "MuseumsType", museum.MuseumTypeId);
             return View(museum);
         }
 
@@ -70,6 +73,7 @@ namespace BucketList.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.MuseumTypeId = new SelectList(db.MuseumTypes, "MuseumTypeId", "MuseumsType", museum.MuseumTypeId);
             return View(museum);
         }
 
@@ -78,7 +82,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MuseumId,Title,Description,Link,Location,MuseumIsComplete")] Museum museum)
+        public ActionResult Edit([Bind(Include = "MuseumId,Title,Description,Link,Location,MuseumTypeId")] Museum museum)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace BucketList.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.MuseumTypeId = new SelectList(db.MuseumTypes, "MuseumTypeId", "MuseumsType", museum.MuseumTypeId);
             return View(museum);
         }
 

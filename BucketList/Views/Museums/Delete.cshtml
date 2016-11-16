@@ -12,6 +12,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.MuseumsType.MuseumsType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MuseumsType.MuseumsType)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
 
@@ -41,14 +49,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Location)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MuseumIsComplete)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MuseumIsComplete)
         </dd>
 
     </dl>

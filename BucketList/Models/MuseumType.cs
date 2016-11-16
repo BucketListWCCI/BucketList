@@ -11,6 +11,7 @@ namespace BucketList.Models
         [Key]
         public int MuseumTypeId { get; set; }
         public string MuseumsType { get; set; }
-        
+        public virtual ICollection<Museum> Museum { get; set; }
+
     }
 }

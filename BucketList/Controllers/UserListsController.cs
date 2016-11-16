@@ -10,112 +10,107 @@ using BucketList.Models;
 
 namespace BucketList.Controllers
 {
-    public class RestaurantsController : Controller
+    public class UserListsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Restaurants
+        // GET: UserLists
         public ActionResult Index()
         {
-            var restaurants = db.restaurants.Include(r => r.RestraurantsType);
-            return View(restaurants.ToList());
+            return View(db.UserLists.ToList());
         }
 
-        // GET: Restaurants/Details/5
+        // GET: UserLists/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Restaurants restaurants = db.restaurants.Find(id);
-            if (restaurants == null)
+            UserList userList = db.UserLists.Find(id);
+            if (userList == null)
             {
                 return HttpNotFound();
             }
-            return View(restaurants);
+            return View(userList);
         }
 
-        // GET: Restaurants/Create
+        // GET: UserLists/Create
         public ActionResult Create()
         {
-            ViewBag.RestraurantTypeId = new SelectList(db.RestraurantTypes, "RestraurantTypeId", "RestraurantsType");
             return View();
         }
 
-        // POST: Restaurants/Create
+        // POST: UserLists/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RestaurantId,Title,Description,Link,Location,RestraurantTypeId")] Restaurants restaurants)
+        public ActionResult Create([Bind(Include = "ListId,Title,Description,Link,Location,UserIsComplete,ApplicationUserId")] UserList userList)
         {
             if (ModelState.IsValid)
             {
-                db.restaurants.Add(restaurants);
+                db.UserLists.Add(userList);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.RestraurantTypeId = new SelectList(db.RestraurantTypes, "RestraurantTypeId", "RestraurantsType", restaurants.RestraurantTypeId);
-            return View(restaurants);
+            return View(userList);
         }
 
-        // GET: Restaurants/Edit/5
+        // GET: UserLists/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Restaurants restaurants = db.restaurants.Find(id);
-            if (restaurants == null)
+            UserList userList = db.UserLists.Find(id);
+            if (userList == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.RestraurantTypeId = new SelectList(db.RestraurantTypes, "RestraurantTypeId", "RestraurantsType", restaurants.RestraurantTypeId);
-            return View(restaurants);
+            return View(userList);
         }
 
-        // POST: Restaurants/Edit/5
+        // POST: UserLists/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RestaurantId,Title,Description,Link,Location,RestraurantTypeId")] Restaurants restaurants)
+        public ActionResult Edit([Bind(Include = "ListId,Title,Description,Link,Location,UserIsComplete,ApplicationUserId")] UserList userList)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(restaurants).State = EntityState.Modified;
+                db.Entry(userList).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.RestraurantTypeId = new SelectList(db.RestraurantTypes, "RestraurantTypeId", "RestraurantsType", restaurants.RestraurantTypeId);
-            return View(restaurants);
+            return View(userList);
         }
 
-        // GET: Restaurants/Delete/5
+        // GET: UserLists/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Restaurants restaurants = db.restaurants.Find(id);
-            if (restaurants == null)
+            UserList userList = db.UserLists.Find(id);
+            if (userList == null)
             {
                 return HttpNotFound();
             }
-            return View(restaurants);
+            return View(userList);
         }
 
-        // POST: Restaurants/Delete/5
+        // POST: UserLists/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Restaurants restaurants = db.restaurants.Find(id);
-            db.restaurants.Remove(restaurants);
+            UserList userList = db.UserLists.Find(id);
+            db.UserLists.Remove(userList);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

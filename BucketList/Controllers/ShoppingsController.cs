@@ -17,7 +17,8 @@ namespace BucketList.Controllers
         // GET: Shoppings
         public ActionResult Index()
         {
-            return View(db.Shoppings.ToList());
+            var shoppings = db.Shoppings.Include(s => s.ShoppingsType);
+            return View(shoppings.ToList());
         }
 
         // GET: Shoppings/Details/5
@@ -38,6 +39,7 @@ namespace BucketList.Controllers
         // GET: Shoppings/Create
         public ActionResult Create()
         {
+            ViewBag.ShoppingTypeID = new SelectList(db.ShoppingTypes, "ShoppingTypeId", "ShoppingsType");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ShoppingId,Title,Description,Location,Link,IsComplete")] Shopping shopping)
+        public ActionResult Create([Bind(Include = "ShoppingId,Title,Description,Location,Link,ShoppingTypeID")] Shopping shopping)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace BucketList.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ShoppingTypeID = new SelectList(db.ShoppingTypes, "ShoppingTypeId", "ShoppingsType", shopping.ShoppingTypeID);
             return View(shopping);
         }
 
@@ -70,6 +73,7 @@ namespace BucketList.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ShoppingTypeID = new SelectList(db.ShoppingTypes, "ShoppingTypeId", "ShoppingsType", shopping.ShoppingTypeID);
             return View(shopping);
         }
 
@@ -78,7 +82,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ShoppingId,Title,Description,Location,Link,IsComplete")] Shopping shopping)
+        public ActionResult Edit([Bind(Include = "ShoppingId,Title,Description,Location,Link,ShoppingTypeID")] Shopping shopping)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace BucketList.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ShoppingTypeID = new SelectList(db.ShoppingTypes, "ShoppingTypeId", "ShoppingsType", shopping.ShoppingTypeID);
             return View(shopping);
         }
 

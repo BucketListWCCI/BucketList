@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BucketList.Models
 {
@@ -14,8 +15,12 @@ namespace BucketList.Models
         public string Description { get; set; }
         public string Link { get; set; }
         public string Location { get; set; }
-        public bool MuseumIsComplete { get; set; }
+     
+
         public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
-        public virtual MuseumType MuseumTypeId { get; set; }
+
+        [ForeignKey ("MuseumsType")]
+        public  int MuseumTypeId { get; set; }
+        public virtual MuseumType MuseumsType { get; set; }
     }
 }

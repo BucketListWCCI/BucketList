@@ -15,9 +15,11 @@ namespace BucketList.Models
         public string Description { get; set; }
         public string Location { get; set; }
         public string Link { get; set; }
-        public bool IsComplete { get; set; }
-        public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
-        public virtual ShoppingType ShoppingTypeID { get; set; }
+        public virtual ApplicationUser User { get; set; }
+
+        [ForeignKey("ShoppingsType")]
+        public int ShoppingTypeID { get; set; }   //This SHOULD be the fk
+        public virtual ShoppingType ShoppingsType { get; set; }
 
 
 
