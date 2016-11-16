@@ -213,17 +213,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611161537214_deletedicollection.cs" />
-    <Compile Include="Migrations\201611161537214_deletedicollection.Designer.cs">
-      <DependentUpon>201611161537214_deletedicollection.cs</DependentUpon>
+    <Compile Include="Migrations\201611161806094_deleted Migration.cs" />
+    <Compile Include="Migrations\201611161806094_deleted Migration.Designer.cs">
+      <DependentUpon>201611161806094_deleted Migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611161601066_creatingcontrolers1.cs" />
-    <Compile Include="Migrations\201611161601066_creatingcontrolers1.Designer.cs">
-      <DependentUpon>201611161601066_creatingcontrolers1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161604298_creatingcontrolers2.cs" />
-    <Compile Include="Migrations\201611161604298_creatingcontrolers2.Designer.cs">
-      <DependentUpon>201611161604298_creatingcontrolers2.cs</DependentUpon>
+    <Compile Include="Migrations\201611161955214_userlist.cs" />
+    <Compile Include="Migrations\201611161955214_userlist.Designer.cs">
+      <DependentUpon>201611161955214_userlist.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -384,14 +380,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611161537214_deletedicollection.resx">
-      <DependentUpon>201611161537214_deletedicollection.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611161806094_deleted Migration.resx">
+      <DependentUpon>201611161806094_deleted Migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161601066_creatingcontrolers1.resx">
-      <DependentUpon>201611161601066_creatingcontrolers1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161604298_creatingcontrolers2.resx">
-      <DependentUpon>201611161604298_creatingcontrolers2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611161955214_userlist.resx">
+      <DependentUpon>201611161955214_userlist.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
