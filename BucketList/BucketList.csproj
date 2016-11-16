@@ -212,31 +212,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Migrations\201611111906564_delete data base to fix login probs.cs" />
-    <Compile Include="Migrations\201611111906564_delete data base to fix login probs.Designer.cs">
-      <DependentUpon>201611111906564_delete data base to fix login probs.cs</DependentUpon>
-=======
-    <Compile Include="Migrations\201611132050030_fixforiegnkeyissue.cs" />
-    <Compile Include="Migrations\201611132050030_fixforiegnkeyissue.Designer.cs">
-      <DependentUpon>201611132050030_fixforiegnkeyissue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611132102199_restraunttypemodel.cs" />
-    <Compile Include="Migrations\201611132102199_restraunttypemodel.Designer.cs">
-      <DependentUpon>201611132102199_restraunttypemodel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611132143486_restraunttypecontroller.cs" />
-    <Compile Include="Migrations\201611132143486_restraunttypecontroller.Designer.cs">
-      <DependentUpon>201611132143486_restraunttypecontroller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611132151142_shoppingtypecontroller.cs" />
-    <Compile Include="Migrations\201611132151142_shoppingtypecontroller.Designer.cs">
-      <DependentUpon>201611132151142_shoppingtypecontroller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611132158178_sportstrypemodelcontroller.cs" />
-    <Compile Include="Migrations\201611132158178_sportstrypemodelcontroller.Designer.cs">
-      <DependentUpon>201611132158178_sportstrypemodelcontroller.cs</DependentUpon>
->>>>>>> kendraWeekend
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201611151626315_StylingChanges.cs" />
+    <Compile Include="Migrations\201611151626315_StylingChanges.Designer.cs">
+      <DependentUpon>201611151626315_StylingChanges.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -391,25 +371,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Migrations\201611111906564_delete data base to fix login probs.resx">
-      <DependentUpon>201611111906564_delete data base to fix login probs.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Migrations\201611132050030_fixforiegnkeyissue.resx">
-      <DependentUpon>201611132050030_fixforiegnkeyissue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611132102199_restraunttypemodel.resx">
-      <DependentUpon>201611132102199_restraunttypemodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611132143486_restraunttypecontroller.resx">
-      <DependentUpon>201611132143486_restraunttypecontroller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611132151142_shoppingtypecontroller.resx">
-      <DependentUpon>201611132151142_shoppingtypecontroller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611132158178_sportstrypemodelcontroller.resx">
-      <DependentUpon>201611132158178_sportstrypemodelcontroller.cs</DependentUpon>
->>>>>>> kendraWeekend
+    <EmbeddedResource Include="Migrations\201611151626315_StylingChanges.resx">
+      <DependentUpon>201611151626315_StylingChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

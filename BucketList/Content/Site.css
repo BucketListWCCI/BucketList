@@ -1,4 +1,5 @@
-﻿body {
+﻿
+body {
     padding-top: 50px;
     padding-bottom: 20px;
     background-image: url('../Images/Cleveland.jpg');
@@ -11,16 +12,62 @@
     text-align:center;
     padding-top:75px;
     background-color: transparent;
-
-
 }
-
 nav navbar-nav {
     font-weight:900;
 }
+.pulse{
+    animation-delay: 3s;
+	animation-name: pulse;
+	-webkit-animation-name: pulse;	
+
+	animation-duration: 2.5s;	
+	-webkit-animation-duration: 2.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1.1);
+		opacity: 0.8;		
+	}
+	50% {
+		transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(1.1);
+		opacity: 0.8;	
+	}			
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(1.1);
+		opacity: 0.8;		
+	}
+	50% {
+		-webkit-transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		-webkit-transform: scale(1.1);
+		opacity: 0.8;	
+	}			
+}
 
 
-
+#loginbutton {
+    text-align: center;
+    visibility:visible;
+}
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
 #fade  {
     margin-top: 25px;
     text-align: center;
@@ -65,9 +112,7 @@ nav navbar-nav {
 
 .navbar {
     background-color:transparent;
-
 }
-
 ul a{
     color:black;
 }

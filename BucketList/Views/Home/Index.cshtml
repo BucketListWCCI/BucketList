@@ -1,4 +1,8 @@
-﻿@{
+﻿<link rel="stylesheet" href="css/animations.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+
+@{
     ViewBag.Title = "Cleveland BucketList";
 }
 
@@ -6,13 +10,16 @@
     <div id="fade">
         <h1>​BucketList Logo</h1>
         <p>Welcome to your source for all your bucket list activites for the CLE</p>
+
+
+
+
+        <div id="loginbutton" class="pulse">
+            <p><a href="/Account/Login" class="btn btn-primary btn-lg">Login &raquo;</a> 
+            <div class="divider"></div> <a href="/Account/Register" class="btn btn-primary btn-lg">Register &raquo;</a></p>
+            
+        </div>
     </div>
-
-
-
-    <div id="loginbutton">
-        <p><a href="/Account/Login" class="btn btn-primary btn-lg">Login &raquo;</a></p>
-   </div>
 </div>
 
 @*<div class="row">
