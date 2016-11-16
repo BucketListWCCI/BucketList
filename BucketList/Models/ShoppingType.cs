@@ -11,6 +11,7 @@ namespace BucketList.Models
         [Key]
         public int ShoppingTypeId { get; set; }
         public string ShoppingsType { get; set; }
+        public virtual ICollection<Shopping> Shopping { get; set; }
 
     }
 }

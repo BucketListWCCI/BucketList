@@ -17,7 +17,8 @@ namespace BucketList.Controllers
         // GET: Sports
         public ActionResult Index()
         {
-            return View(db.sports.ToList());
+            var sports = db.sports.Include(s => s.SportType);
+            return View(sports.ToList());
         }
 
         // GET: Sports/Details/5
@@ -38,6 +39,7 @@ namespace BucketList.Controllers
         // GET: Sports/Create
         public ActionResult Create()
         {
+            ViewBag.SportTypeId = new SelectList(db.SportsTypes, "SportsTypeId", "SportType");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SportsId,Title,Description,Link,SportsIsComplete")] Sports sports)
+        public ActionResult Create([Bind(Include = "SportsId,Title,Description,Link,SportTypeId")] Sports sports)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace BucketList.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.SportTypeId = new SelectList(db.SportsTypes, "SportsTypeId", "SportType", sports.SportTypeId);
             return View(sports);
         }
 
@@ -70,6 +73,7 @@ namespace BucketList.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.SportTypeId = new SelectList(db.SportsTypes, "SportsTypeId", "SportType", sports.SportTypeId);
             return View(sports);
         }
 
@@ -78,7 +82,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SportsId,Title,Description,Link,SportsIsComplete")] Sports sports)
+        public ActionResult Edit([Bind(Include = "SportsId,Title,Description,Link,SportTypeId")] Sports sports)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace BucketList.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.SportTypeId = new SelectList(db.SportsTypes, "SportsTypeId", "SportType", sports.SportTypeId);
             return View(sports);
         }
 

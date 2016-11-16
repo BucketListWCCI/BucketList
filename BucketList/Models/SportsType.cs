@@ -12,5 +12,6 @@ namespace BucketList.Models
 
         public int SportsTypeId { get; set; }
         public string  SportType { get; set; }
+        public virtual ICollection<Sports> Sports { get; set; }
     }
 }

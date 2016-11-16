@@ -1,4 +1,4 @@
-﻿@model BucketList.Models.Museum
+﻿@model BucketList.Models.UserList
 
 @{
     ViewBag.Title = "Details";
@@ -7,17 +7,9 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Museum</h4>
+    <h4>UserList</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MuseumsType.MuseumsType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MuseumsType.MuseumsType)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -50,9 +42,25 @@
             @Html.DisplayFor(model => model.Location)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.UserIsComplete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserIsComplete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUserId)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MuseumId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ListId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
