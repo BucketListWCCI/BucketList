@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
-	
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BucketList.Models
 {
@@ -14,8 +14,10 @@ namespace BucketList.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string Link { get; set; }
-        public string SportsIsComplete { get; set; }
-        public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
-        public virtual SportsType SportsTypeId { get; set;}
+        public virtual ApplicationUser User { get; set; }   
+        
+        [ForeignKey ("SportType")] //This SHOULD be the fk
+        public int SportTypeId { get; set; }
+        public virtual SportsType SportType { get; set;}
     }
 }

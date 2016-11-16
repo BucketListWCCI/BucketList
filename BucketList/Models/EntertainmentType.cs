@@ -13,6 +13,7 @@ namespace BucketList.Models
         [Key]
         public int EntertainmentTypeId { get; set; }
         public string EntertainmentsType { get; set; }
+        public virtual ICollection<Entertainment> Entertainment {get; set;}
 
 
      }

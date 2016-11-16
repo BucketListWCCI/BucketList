@@ -17,7 +17,8 @@ namespace BucketList.Controllers
         // GET: Entertainments
         public ActionResult Index()
         {
-            return View(db.entertainments.ToList());
+            var entertainments = db.entertainments.Include(e => e.EntertainmentsType);
+            return View(entertainments.ToList());
         }
 
         // GET: Entertainments/Details/5
@@ -38,6 +39,7 @@ namespace BucketList.Controllers
         // GET: Entertainments/Create
         public ActionResult Create()
         {
+            ViewBag.EntertainmentTypeId = new SelectList(db.EntertainmentTypes, "EntertainmentTypeId", "EntertainmentsType");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EntertainmentId,Title,Description,Link,Location,EntertainmentIsComplete")] Entertainment entertainment)
+        public ActionResult Create([Bind(Include = "EntertainmentId,Title,Description,Link,Location,EntertainmentTypeId")] Entertainment entertainment)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace BucketList.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.EntertainmentTypeId = new SelectList(db.EntertainmentTypes, "EntertainmentTypeId", "EntertainmentsType", entertainment.EntertainmentTypeId);
             return View(entertainment);
         }
 
@@ -70,6 +73,7 @@ namespace BucketList.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.EntertainmentTypeId = new SelectList(db.EntertainmentTypes, "EntertainmentTypeId", "EntertainmentsType", entertainment.EntertainmentTypeId);
             return View(entertainment);
         }
 
@@ -78,7 +82,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EntertainmentId,Title,Description,Link,Location,EntertainmentIsComplete")] Entertainment entertainment)
+        public ActionResult Edit([Bind(Include = "EntertainmentId,Title,Description,Link,Location,EntertainmentTypeId")] Entertainment entertainment)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace BucketList.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.EntertainmentTypeId = new SelectList(db.EntertainmentTypes, "EntertainmentTypeId", "EntertainmentsType", entertainment.EntertainmentTypeId);
             return View(entertainment);
         }
 

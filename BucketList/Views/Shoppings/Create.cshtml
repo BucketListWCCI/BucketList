@@ -48,12 +48,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IsComplete, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ShoppingTypeID, "ShoppingTypeID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.IsComplete)
-                    @Html.ValidationMessageFor(model => model.IsComplete, "", new { @class = "text-danger" })
-                </div>
+                @Html.DropDownList("ShoppingTypeID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ShoppingTypeID, "", new { @class = "text-danger" })
             </div>
         </div>
 
