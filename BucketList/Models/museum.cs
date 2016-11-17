@@ -15,8 +15,6 @@ namespace BucketList.Models
         public string Description { get; set; }
         public string Link { get; set; }
         public string Location { get; set; }
-     
-
         public virtual ApplicationUser User { get; set; }   //This SHOULD be the fk
 
         [ForeignKey ("MuseumsType")]

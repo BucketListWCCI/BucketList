@@ -22,9 +22,9 @@ namespace BucketList.Models
         public string Bio { get; set; }
         
 
-        [ForeignKey("UserList")]
-        public int ListId { get; set; }
-        public virtual UserList UserList { get; set; }
+        //[ForeignKey("UserList")]
+        //public int ListId { get; set; }
+        //public virtual UserList UserList { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
