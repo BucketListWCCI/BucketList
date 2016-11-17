@@ -2,6 +2,7 @@
 <html>
 <link rel="stylesheet" href="css/animations.css">
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 
 <head>
     <meta charset="utf-8" />
@@ -35,10 +36,11 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 216 Enterprises</p>
-        </footer>
+        <div id="footer">
+            <footer>
+                <p>&copy; @DateTime.Now.Year - 216 Enterprises</p>
+            </footer>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
