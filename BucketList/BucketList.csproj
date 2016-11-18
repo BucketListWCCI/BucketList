@@ -200,6 +200,7 @@
     <Compile Include="Controllers\EntertainmentsController.cs" />
     <Compile Include="Controllers\EntertainmentTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ListCategoriesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MuseumsController.cs" />
     <Compile Include="Controllers\MuseumTypesController.cs" />
@@ -213,15 +214,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611161806094_deleted Migration.cs" />
-    <Compile Include="Migrations\201611161806094_deleted Migration.Designer.cs">
-      <DependentUpon>201611161806094_deleted Migration.cs</DependentUpon>
-    </Compile>
+
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
     <Compile Include="Models\EntertainmentType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ListCategory.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Museum.cs" />
     <Compile Include="Models\MuseumType.cs" />
@@ -240,7 +239,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\UserListSS.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -258,9 +256,18 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <Content Include="Images\Bradsmall.png" />
+    <Content Include="Images\bucket-list-clip-art-bucket-list-charm-and-letters-sy9LBH-clipart.jpg" />
     <Content Include="Images\bucketlistblack.png" />
     <Content Include="Images\bucketlistwhite.png" />
+    <Content Include="Images\Cleveland.jpg" />
     <Content Include="Images\clevlandbkgrnd.jpg" />
+    <Content Include="Images\HeadShotsmall.png" />
+    <Content Include="Images\Kendrasmall.jpg" />
+    <Content Include="Images\TopLogoBlack.ico" />
+    <Content Include="Images\TopLogoBlack.png" />
+    <Content Include="Images\TopLogoWhite.png" />
+    <Content Include="Images\Zerricksmall.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -324,11 +331,6 @@
     <Content Include="Views\MuseumTypes\Details.cshtml" />
     <Content Include="Views\MuseumTypes\Edit.cshtml" />
     <Content Include="Views\MuseumTypes\Index.cshtml" />
-    <Content Include="Views\UserLists\Create.cshtml" />
-    <Content Include="Views\UserLists\Delete.cshtml" />
-    <Content Include="Views\UserLists\Details.cshtml" />
-    <Content Include="Views\UserLists\Edit.cshtml" />
-    <Content Include="Views\UserLists\Index.cshtml" />
     <Content Include="Views\Entertainments\Create.cshtml" />
     <Content Include="Views\Entertainments\Delete.cshtml" />
     <Content Include="Views\Entertainments\Details.cshtml" />
@@ -369,6 +371,16 @@
     <Content Include="Views\SportsTypes\Details.cshtml" />
     <Content Include="Views\SportsTypes\Edit.cshtml" />
     <Content Include="Views\SportsTypes\Index.cshtml" />
+    <Content Include="Views\ListCategories\Create.cshtml" />
+    <Content Include="Views\ListCategories\Delete.cshtml" />
+    <Content Include="Views\ListCategories\Details.cshtml" />
+    <Content Include="Views\ListCategories\Edit.cshtml" />
+    <Content Include="Views\ListCategories\Index.cshtml" />
+    <Content Include="Views\UserLists\Create.cshtml" />
+    <Content Include="Views\UserLists\Delete.cshtml" />
+    <Content Include="Views\UserLists\Details.cshtml" />
+    <Content Include="Views\UserLists\Edit.cshtml" />
+    <Content Include="Views\UserLists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -377,11 +389,7 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611161806094_deleted Migration.resx">
-      <DependentUpon>201611161806094_deleted Migration.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
+ 
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
