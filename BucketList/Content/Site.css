@@ -62,9 +62,13 @@ nav navbar-nav {
     color:ghostwhite;
     font-family: 'Shrikhand', cursive;
 }
+#teamPhoto {
+    text-align:center;
+}
 #team {
     color:black;
-    background-color: white; opacity:0.6
+    background-color: lightgray; opacity:0.8;
+    text-align:center;
 }
 #description{
     padding: 0px;
@@ -75,6 +79,9 @@ nav navbar-nav {
 #loginbutton {
     text-align: center;
     visibility:visible;
+}
+#contactLogo {
+    text-align:center;
 }
 .divider{
     width:3px;
@@ -91,7 +98,6 @@ nav navbar-nav {
          -o-animation: fadein 6s; /* Opera < 12.1 */
             animation: fadein 6s;
 }
-
 
 @keyframes fadein {
     from { opacity: 0; }

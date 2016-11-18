@@ -3,7 +3,7 @@ namespace BucketList.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class deletedMigration : DbMigration
+    public partial class LogoAdd : DbMigration
     {
         public override void Up()
         {
@@ -54,14 +54,11 @@ namespace BucketList.Migrations
                         LockoutEnabled = c.Boolean(nullable: false),
                         AccessFailedCount = c.Int(nullable: false),
                         UserList_ListId = c.Int(),
-                        UserList_ListId1 = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.UserLists", t => t.UserList_ListId)
-                .ForeignKey("dbo.UserLists", t => t.UserList_ListId1)
                 .Index(t => t.UserName, unique: true, name: "UserNameIndex")
-                .Index(t => t.UserList_ListId)
-                .Index(t => t.UserList_ListId1);
+                .Index(t => t.UserList_ListId);
             
             CreateTable(
                 "dbo.AspNetUserClaims",
@@ -100,23 +97,6 @@ namespace BucketList.Migrations
                 .ForeignKey("dbo.AspNetRoles", t => t.RoleId, cascadeDelete: true)
                 .Index(t => t.UserId)
                 .Index(t => t.RoleId);
-            
-            CreateTable(
-                "dbo.UserLists",
-                c => new
-                    {
-                        ListId = c.Int(nullable: false, identity: true),
-                        Title = c.String(),
-                        Description = c.String(),
-                        Link = c.String(),
-                        Location = c.String(),
-                        UserIsComplete = c.Boolean(nullable: false),
-                        ApplicationUserId = c.String(),
-                        UserName_Id = c.String(maxLength: 128),
-                    })
-                .PrimaryKey(t => t.ListId)
-                .ForeignKey("dbo.AspNetUsers", t => t.UserName_Id)
-                .Index(t => t.UserName_Id);
             
             CreateTable(
                 "dbo.Museums",
@@ -235,10 +215,29 @@ namespace BucketList.Migrations
                     })
                 .PrimaryKey(t => t.SportsTypeId);
             
+            CreateTable(
+                "dbo.UserLists",
+                c => new
+                    {
+                        ListId = c.Int(nullable: false, identity: true),
+                        Title = c.String(),
+                        Description = c.String(),
+                        Link = c.String(),
+                        Location = c.String(),
+                        UserIsComplete = c.Boolean(nullable: false),
+                        ApplicationUserId = c.String(),
+                        UserName_Id = c.String(maxLength: 128),
+                    })
+                .PrimaryKey(t => t.ListId)
+                .ForeignKey("dbo.AspNetUsers", t => t.UserName_Id)
+                .Index(t => t.UserName_Id);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.UserLists", "UserName_Id", "dbo.AspNetUsers");
+            DropForeignKey("dbo.AspNetUsers", "UserList_ListId", "dbo.UserLists");
             DropForeignKey("dbo.Sports", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.Sports", "SportTypeId", "dbo.SportsTypes");
             DropForeignKey("dbo.Shoppings", "User_Id", "dbo.AspNetUsers");
@@ -249,13 +248,11 @@ namespace BucketList.Migrations
             DropForeignKey("dbo.Museums", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.Museums", "MuseumTypeId", "dbo.MuseumTypes");
             DropForeignKey("dbo.Entertainments", "User_Id", "dbo.AspNetUsers");
-            DropForeignKey("dbo.AspNetUsers", "UserList_ListId1", "dbo.UserLists");
-            DropForeignKey("dbo.UserLists", "UserName_Id", "dbo.AspNetUsers");
-            DropForeignKey("dbo.AspNetUsers", "UserList_ListId", "dbo.UserLists");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Entertainments", "EntertainmentTypeId", "dbo.EntertainmentTypes");
+            DropIndex("dbo.UserLists", new[] { "UserName_Id" });
             DropIndex("dbo.Sports", new[] { "User_Id" });
             DropIndex("dbo.Sports", new[] { "SportTypeId" });
             DropIndex("dbo.Shoppings", new[] { "User_Id" });
@@ -265,16 +262,15 @@ namespace BucketList.Migrations
             DropIndex("dbo.Restaurants", new[] { "RestraurantTypeId" });
             DropIndex("dbo.Museums", new[] { "User_Id" });
             DropIndex("dbo.Museums", new[] { "MuseumTypeId" });
-            DropIndex("dbo.UserLists", new[] { "UserName_Id" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
-            DropIndex("dbo.AspNetUsers", new[] { "UserList_ListId1" });
             DropIndex("dbo.AspNetUsers", new[] { "UserList_ListId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.Entertainments", new[] { "User_Id" });
             DropIndex("dbo.Entertainments", new[] { "EntertainmentTypeId" });
+            DropTable("dbo.UserLists");
             DropTable("dbo.SportsTypes");
             DropTable("dbo.Sports");
             DropTable("dbo.ShoppingTypes");
@@ -284,7 +280,6 @@ namespace BucketList.Migrations
             DropTable("dbo.Restaurants");
             DropTable("dbo.MuseumTypes");
             DropTable("dbo.Museums");
-            DropTable("dbo.UserLists");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
