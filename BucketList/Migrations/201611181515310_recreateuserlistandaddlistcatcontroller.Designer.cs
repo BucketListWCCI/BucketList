@@ -7,13 +7,13 @@ namespace BucketList.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class deletedMigration : IMigrationMetadata
+    public sealed partial class recreateuserlistandaddlistcatcontroller : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(deletedMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(recreateuserlistandaddlistcatcontroller));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611161806094_deleted Migration"; }
+            get { return "201611181515310_recreateuserlistandaddlistcatcontroller"; }
         }
         
         string IMigrationMetadata.Source

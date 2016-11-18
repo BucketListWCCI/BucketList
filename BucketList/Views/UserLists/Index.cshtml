@@ -12,10 +12,16 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.ListCategories.ListCategories)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemCategory)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Link)
@@ -35,10 +41,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.ListCategories.ListCategories)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemCategory)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Link)
