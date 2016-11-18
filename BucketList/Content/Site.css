@@ -2,9 +2,9 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url('../Images/Cleveland.jpg');
+    background-image: url('../Images/clevlandbkgrnd.jpg');
     background-size: cover;
-    font-family:Aharoni;
+    font-family: Aharoni;
 }
 .jumbotron {
     color:black;
@@ -13,6 +13,7 @@ body {
     padding-top:75px;
     background-color: transparent;
 }
+
 nav navbar-nav {
     font-weight:900;
 }
@@ -57,15 +58,34 @@ nav navbar-nav {
 		opacity: 0.8;	
 	}			
 }
-
-
+#footer {
+    color:ghostwhite;
+    font-family: 'Shrikhand', cursive;
+}
+#teamPhoto {
+    text-align:center;
+}
+#team {
+    color:black;
+    background-color: lightgray; opacity:0.8;
+    text-align:center;
+}
+#description{
+    padding: 0px;
+    text-align:center;
+    color: ghostwhite;
+    font-family: 'Shrikhand', cursive;
+}
 #loginbutton {
     text-align: center;
     visibility:visible;
 }
+#contactLogo {
+    text-align:center;
+}
 .divider{
-    width:5px;
-    height:auto;
+    width:3px;
+    height:0px;
     display:inline-block;
 }
 #fade  {
@@ -77,9 +97,7 @@ nav navbar-nav {
         -ms-animation: fadein 6s; /* Internet Explorer */
          -o-animation: fadein 6s; /* Opera < 12.1 */
             animation: fadein 6s;
-
 }
-
 
 @keyframes fadein {
     from { opacity: 0; }
