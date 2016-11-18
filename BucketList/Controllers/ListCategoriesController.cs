@@ -10,112 +10,107 @@ using BucketList.Models;
 
 namespace BucketList.Controllers
 {
-    public class UserListsController : Controller
+    public class ListCategoriesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: UserLists
+        // GET: ListCategories
         public ActionResult Index()
         {
-            var userLists = db.UserLists.Include(u => u.ListCategories);
-            return View(userLists.ToList());
+            return View(db.ListCategories.ToList());
         }
 
-        // GET: UserLists/Details/5
+        // GET: ListCategories/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserList userList = db.UserLists.Find(id);
-            if (userList == null)
+            ListCategory listCategory = db.ListCategories.Find(id);
+            if (listCategory == null)
             {
                 return HttpNotFound();
             }
-            return View(userList);
+            return View(listCategory);
         }
 
-        // GET: UserLists/Create
+        // GET: ListCategories/Create
         public ActionResult Create()
         {
-            ViewBag.ListCategoryId = new SelectList(db.ListCategories, "ListCategoryId", "ListCategories");
             return View();
         }
 
-        // POST: UserLists/Create
+        // POST: ListCategories/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ListId,Title,Description,ItemCategory,Link,Location,UserIsComplete,ApplicationUserId,ListCategoryId")] UserList userList)
+        public ActionResult Create([Bind(Include = "ListCategoryId,ListCategories")] ListCategory listCategory)
         {
             if (ModelState.IsValid)
             {
-                db.UserLists.Add(userList);
+                db.ListCategories.Add(listCategory);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ListCategoryId = new SelectList(db.ListCategories, "ListCategoryId", "ListCategories", userList.ListCategoryId);
-            return View(userList);
+            return View(listCategory);
         }
 
-        // GET: UserLists/Edit/5
+        // GET: ListCategories/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserList userList = db.UserLists.Find(id);
-            if (userList == null)
+            ListCategory listCategory = db.ListCategories.Find(id);
+            if (listCategory == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.ListCategoryId = new SelectList(db.ListCategories, "ListCategoryId", "ListCategories", userList.ListCategoryId);
-            return View(userList);
+            return View(listCategory);
         }
 
-        // POST: UserLists/Edit/5
+        // POST: ListCategories/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ListId,Title,Description,ItemCategory,Link,Location,UserIsComplete,ApplicationUserId,ListCategoryId")] UserList userList)
+        public ActionResult Edit([Bind(Include = "ListCategoryId,ListCategories")] ListCategory listCategory)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(userList).State = EntityState.Modified;
+                db.Entry(listCategory).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ListCategoryId = new SelectList(db.ListCategories, "ListCategoryId", "ListCategories", userList.ListCategoryId);
-            return View(userList);
+            return View(listCategory);
         }
 
-        // GET: UserLists/Delete/5
+        // GET: ListCategories/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserList userList = db.UserLists.Find(id);
-            if (userList == null)
+            ListCategory listCategory = db.ListCategories.Find(id);
+            if (listCategory == null)
             {
                 return HttpNotFound();
             }
-            return View(userList);
+            return View(listCategory);
         }
 
-        // POST: UserLists/Delete/5
+        // POST: ListCategories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            UserList userList = db.UserLists.Find(id);
-            db.UserLists.Remove(userList);
+            ListCategory listCategory = db.ListCategories.Find(id);
+            db.ListCategories.Remove(listCategory);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

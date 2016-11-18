@@ -200,6 +200,7 @@
     <Compile Include="Controllers\EntertainmentsController.cs" />
     <Compile Include="Controllers\EntertainmentTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ListCategoriesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MuseumsController.cs" />
     <Compile Include="Controllers\MuseumTypesController.cs" />
@@ -213,15 +214,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201611171927557_LogoAdd.cs" />
     <Compile Include="Migrations\201611171927557_LogoAdd.Designer.cs">
       <DependentUpon>201611171927557_LogoAdd.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201611181509041_addlistcategory.cs" />
+    <Compile Include="Migrations\201611181509041_addlistcategory.Designer.cs">
+      <DependentUpon>201611181509041_addlistcategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611181515310_recreateuserlistandaddlistcatcontroller.cs" />
+    <Compile Include="Migrations\201611181515310_recreateuserlistandaddlistcatcontroller.Designer.cs">
+      <DependentUpon>201611181515310_recreateuserlistandaddlistcatcontroller.cs</DependentUpon>
+>>>>>>> 96929371b378cd18073a867f005f3b93878c2125
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
     <Compile Include="Models\EntertainmentType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ListCategory.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Museum.cs" />
     <Compile Include="Models\MuseumType.cs" />
@@ -332,11 +344,6 @@
     <Content Include="Views\MuseumTypes\Details.cshtml" />
     <Content Include="Views\MuseumTypes\Edit.cshtml" />
     <Content Include="Views\MuseumTypes\Index.cshtml" />
-    <Content Include="Views\UserLists\Create.cshtml" />
-    <Content Include="Views\UserLists\Delete.cshtml" />
-    <Content Include="Views\UserLists\Details.cshtml" />
-    <Content Include="Views\UserLists\Edit.cshtml" />
-    <Content Include="Views\UserLists\Index.cshtml" />
     <Content Include="Views\Entertainments\Create.cshtml" />
     <Content Include="Views\Entertainments\Delete.cshtml" />
     <Content Include="Views\Entertainments\Details.cshtml" />
@@ -377,6 +384,16 @@
     <Content Include="Views\SportsTypes\Details.cshtml" />
     <Content Include="Views\SportsTypes\Edit.cshtml" />
     <Content Include="Views\SportsTypes\Index.cshtml" />
+    <Content Include="Views\ListCategories\Create.cshtml" />
+    <Content Include="Views\ListCategories\Delete.cshtml" />
+    <Content Include="Views\ListCategories\Details.cshtml" />
+    <Content Include="Views\ListCategories\Edit.cshtml" />
+    <Content Include="Views\ListCategories\Index.cshtml" />
+    <Content Include="Views\UserLists\Create.cshtml" />
+    <Content Include="Views\UserLists\Delete.cshtml" />
+    <Content Include="Views\UserLists\Details.cshtml" />
+    <Content Include="Views\UserLists\Edit.cshtml" />
+    <Content Include="Views\UserLists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -386,8 +403,16 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201611171927557_LogoAdd.resx">
       <DependentUpon>201611171927557_LogoAdd.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201611181509041_addlistcategory.resx">
+      <DependentUpon>201611181509041_addlistcategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611181515310_recreateuserlistandaddlistcatcontroller.resx">
+      <DependentUpon>201611181515310_recreateuserlistandaddlistcatcontroller.cs</DependentUpon>
+>>>>>>> 96929371b378cd18073a867f005f3b93878c2125
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

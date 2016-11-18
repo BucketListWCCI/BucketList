@@ -34,7 +34,16 @@ namespace BucketList.Controllers
                 return HttpNotFound();
             }
             return View(museum);
+
+          //  public saveToList()
+             {
+
+             }
+
+
         }
+
+
 
         // GET: Museums/Create
         public ActionResult Create()
