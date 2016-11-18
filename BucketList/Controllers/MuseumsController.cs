@@ -34,13 +34,6 @@ namespace BucketList.Controllers
                 return HttpNotFound();
             }
             return View(museum);
-
-          //  public saveToList()
-             {
-
-             }
-
-
         }
 
 
@@ -95,7 +88,7 @@ namespace BucketList.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(museum).State = EntityState.Modified;
+                db.Entry(museum).State = EntityState.Modified; 
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
