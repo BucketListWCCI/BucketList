@@ -214,20 +214,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Migrations\201611171927557_LogoAdd.cs" />
-    <Compile Include="Migrations\201611171927557_LogoAdd.Designer.cs">
-      <DependentUpon>201611171927557_LogoAdd.cs</DependentUpon>
-=======
-    <Compile Include="Migrations\201611181509041_addlistcategory.cs" />
-    <Compile Include="Migrations\201611181509041_addlistcategory.Designer.cs">
-      <DependentUpon>201611181509041_addlistcategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611181515310_recreateuserlistandaddlistcatcontroller.cs" />
-    <Compile Include="Migrations\201611181515310_recreateuserlistandaddlistcatcontroller.Designer.cs">
-      <DependentUpon>201611181515310_recreateuserlistandaddlistcatcontroller.cs</DependentUpon>
->>>>>>> 96929371b378cd18073a867f005f3b93878c2125
-    </Compile>
+
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
@@ -402,19 +389,7 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Migrations\201611171927557_LogoAdd.resx">
-      <DependentUpon>201611171927557_LogoAdd.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Migrations\201611181509041_addlistcategory.resx">
-      <DependentUpon>201611181509041_addlistcategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611181515310_recreateuserlistandaddlistcatcontroller.resx">
-      <DependentUpon>201611181515310_recreateuserlistandaddlistcatcontroller.cs</DependentUpon>
->>>>>>> 96929371b378cd18073a867f005f3b93878c2125
-    </EmbeddedResource>
-  </ItemGroup>
+ 
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
