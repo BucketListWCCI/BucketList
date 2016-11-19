@@ -1,10 +1,12 @@
-﻿@model IEnumerable<BucketList.Models.UserList>
+﻿<link href="~/Content/UserListSS.css" rel="stylesheet" />
+
+@model IEnumerable<BucketList.Models.UserList>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>My Bucket List</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
