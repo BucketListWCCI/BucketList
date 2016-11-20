@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Web.Script.Serialization;
 
 
 
@@ -34,7 +35,13 @@ namespace BucketList.Models
             return userIdentity;
         }
 
+        [ScriptIgnore]
+        public virtual ICollection<ApplicationUser> Followers { get; set; }
+        public virtual ICollection<ApplicationUser> Following { get; set; }
+
     }
+
+
         public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         {
             public ApplicationDbContext()
