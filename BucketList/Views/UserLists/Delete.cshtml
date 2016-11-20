@@ -1,4 +1,5 @@
-﻿@model BucketList.Models.UserList
+﻿<link href="~/Content/UserListSS.css" rel="stylesheet" />
+@model BucketList.Models.UserList
 
 @{
     ViewBag.Title = "Delete";
@@ -11,6 +12,14 @@
     <h4>UserList</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ListCategories.ListCategories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ListCategories.ListCategories)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -25,6 +34,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemCategory)
         </dd>
 
         <dt>

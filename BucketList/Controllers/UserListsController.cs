@@ -17,7 +17,8 @@ namespace BucketList.Controllers
         // GET: UserLists
         public ActionResult Index()
         {
-            return View(db.UserLists.ToList());
+            var userLists = db.UserLists.Include(u => u.ListCategories);
+            return View(userLists.ToList());
         }
 
         // GET: UserLists/Details/5
@@ -38,6 +39,7 @@ namespace BucketList.Controllers
         // GET: UserLists/Create
         public ActionResult Create()
         {
+            ViewBag.ListCategoryId = new SelectList(db.ListCategories, "ListCategoryId", "ListCategories");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ListId,Title,Description,Link,Location,UserIsComplete,ApplicationUserId")] UserList userList)
+        public ActionResult Create([Bind(Include = "ListId,Title,Description,ItemCategory,Link,Location,UserIsComplete,ApplicationUserId,ListCategoryId")] UserList userList)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace BucketList.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ListCategoryId = new SelectList(db.ListCategories, "ListCategoryId", "ListCategories", userList.ListCategoryId);
             return View(userList);
         }
 
@@ -70,6 +73,7 @@ namespace BucketList.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ListCategoryId = new SelectList(db.ListCategories, "ListCategoryId", "ListCategories", userList.ListCategoryId);
             return View(userList);
         }
 
@@ -78,7 +82,7 @@ namespace BucketList.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ListId,Title,Description,Link,Location,UserIsComplete,ApplicationUserId")] UserList userList)
+        public ActionResult Edit([Bind(Include = "ListId,Title,Description,ItemCategory,Link,Location,UserIsComplete,ApplicationUserId,ListCategoryId")] UserList userList)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace BucketList.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ListCategoryId = new SelectList(db.ListCategories, "ListCategoryId", "ListCategories", userList.ListCategoryId);
             return View(userList);
         }
 

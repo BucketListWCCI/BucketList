@@ -1,4 +1,6 @@
-﻿@model BucketList.Models.UserList
+﻿< link href = "~/Content/UserListSS.css" rel = "stylesheet" />
+@model BucketList.Models.UserList
+
 
 @{
     ViewBag.Title = "Edit";
@@ -34,6 +36,14 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.ItemCategory, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ItemCategory, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ItemCategory, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.Link, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Link, new { htmlAttributes = new { @class = "form-control" } })
@@ -64,6 +74,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ApplicationUserId, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ApplicationUserId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ListCategoryId, "ListCategoryId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ListCategoryId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ListCategoryId, "", new { @class = "text-danger" })
             </div>
         </div>
 

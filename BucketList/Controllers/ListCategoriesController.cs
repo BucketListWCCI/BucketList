@@ -10,114 +10,107 @@ using BucketList.Models;
 
 namespace BucketList.Controllers
 {
-    public class MuseumsController : Controller
+    public class ListCategoriesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Museums
+        // GET: ListCategories
         public ActionResult Index()
         {
-            var museums = db.museums.Include(m => m.MuseumsType);
-            return View(museums.ToList());
+            return View(db.ListCategories.ToList());
         }
 
-        // GET: Museums/Details/5
+        // GET: ListCategories/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Museum museum = db.museums.Find(id);
-            if (museum == null)
+            ListCategory listCategory = db.ListCategories.Find(id);
+            if (listCategory == null)
             {
                 return HttpNotFound();
             }
-            return View(museum);
+            return View(listCategory);
         }
 
-
-
-        // GET: Museums/Create
+        // GET: ListCategories/Create
         public ActionResult Create()
         {
-            ViewBag.MuseumTypeId = new SelectList(db.MuseumTypes, "MuseumTypeId", "MuseumsType");
             return View();
         }
 
-        // POST: Museums/Create
+        // POST: ListCategories/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MuseumId,Title,Description,Link,Location,MuseumTypeId")] Museum museum)
+        public ActionResult Create([Bind(Include = "ListCategoryId,ListCategories")] ListCategory listCategory)
         {
             if (ModelState.IsValid)
             {
-                db.museums.Add(museum);
+                db.ListCategories.Add(listCategory);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MuseumTypeId = new SelectList(db.MuseumTypes, "MuseumTypeId", "MuseumsType", museum.MuseumTypeId);
-            return View(museum);
+            return View(listCategory);
         }
 
-        // GET: Museums/Edit/5
+        // GET: ListCategories/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Museum museum = db.museums.Find(id);
-            if (museum == null)
+            ListCategory listCategory = db.ListCategories.Find(id);
+            if (listCategory == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.MuseumTypeId = new SelectList(db.MuseumTypes, "MuseumTypeId", "MuseumsType", museum.MuseumTypeId);
-            return View(museum);
+            return View(listCategory);
         }
 
-        // POST: Museums/Edit/5
+        // POST: ListCategories/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MuseumId,Title,Description,Link,Location,MuseumTypeId")] Museum museum)
+        public ActionResult Edit([Bind(Include = "ListCategoryId,ListCategories")] ListCategory listCategory)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(museum).State = EntityState.Modified; 
+                db.Entry(listCategory).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MuseumTypeId = new SelectList(db.MuseumTypes, "MuseumTypeId", "MuseumsType", museum.MuseumTypeId);
-            return View(museum);
+            return View(listCategory);
         }
 
-        // GET: Museums/Delete/5
+        // GET: ListCategories/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Museum museum = db.museums.Find(id);
-            if (museum == null)
+            ListCategory listCategory = db.ListCategories.Find(id);
+            if (listCategory == null)
             {
                 return HttpNotFound();
             }
-            return View(museum);
+            return View(listCategory);
         }
 
-        // POST: Museums/Delete/5
+        // POST: ListCategories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Museum museum = db.museums.Find(id);
-            db.museums.Remove(museum);
+            ListCategory listCategory = db.ListCategories.Find(id);
+            db.ListCategories.Remove(listCategory);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

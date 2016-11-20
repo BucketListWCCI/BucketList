@@ -69,6 +69,8 @@ namespace BucketList.Models
 
         public System.Data.Entity.DbSet<BucketList.Models.UserList> UserLists { get; set; }
 
+        public System.Data.Entity.DbSet<BucketList.Models.ListCategory> ListCategories { get; set; }
+
         //public System.Data.Entity.DbSet<BucketList.Models.UserList> UserLists { get; set; }
 
         //public System.Data.Entity.DbSet<BucketList.Models.ApplicationUser> ApplicationUsers { get; set; }
