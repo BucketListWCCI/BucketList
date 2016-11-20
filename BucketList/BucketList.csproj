@@ -218,6 +218,10 @@
     <Compile Include="Migrations\201611201852590_FollowingAndFollowers.Designer.cs">
       <DependentUpon>201611201852590_FollowingAndFollowers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611202119251_AddedBrowse.cs" />
+    <Compile Include="Migrations\201611202119251_AddedBrowse.Designer.cs">
+      <DependentUpon>201611202119251_AddedBrowse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
@@ -386,6 +390,7 @@
     <Content Include="Views\UserLists\Edit.cshtml" />
     <Content Include="Views\UserLists\Index.cshtml" />
     <Content Include="Views\UserLists\Follow.cshtml" />
+    <Content Include="Views\UserLists\Browse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -397,6 +402,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611201852590_FollowingAndFollowers.resx">
       <DependentUpon>201611201852590_FollowingAndFollowers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611202119251_AddedBrowse.resx">
+      <DependentUpon>201611202119251_AddedBrowse.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

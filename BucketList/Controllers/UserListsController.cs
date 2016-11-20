@@ -50,6 +50,14 @@ namespace BucketList.Controllers
         }
 
 
+        public ActionResult Browse()
+        {
+            List<UserList> chats = db.UserLists.OrderByDescending(c => c.ListId).ToList();
+            ViewBag.chats = chats;
+            return View();
+        }
+
+
 
 
 

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BucketList.Models.UserList>
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2 class="heading">Trending Now</h2>
+
+
+<div class="row">
+    @foreach (var item in ViewBag.userList)
+    {
+        <div class="col-xs-12 col-md-8 col-md-offset-2 chat">
+            <span class="email"> @item.ApplicationUser.Email </span><br />
+
+            @item.Content<br />
+
+
+            @if (Request.IsAuthenticated)
+            {
+
+                @Html.ActionLink("Follow", "Follow", new { id = item.UserListID })
+
+            }
+        </div>
+    }
+
+
+</div>
