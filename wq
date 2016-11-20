@@ -1,0 +1,379 @@
+[33mcommit 1552fd4dd91d689c81d9c3aad6f45613dd10c1ec[m
+Author: Brad Kilkenney <bkilkenney@gmail.com>
+Date:   Sat Nov 19 17:03:09 2016 -0500
+
+    Add Display Names in UserList.cs.  Comment out ID fields in UserList/Create View.  Adjusted Lambdas on MultipleWordFields.
+
+[33mcommit 1ea5dd48d1b3799b1aff15ee659f671240e86c67[m
+Author: Brad Kilkenney <bkilkenney@gmail.com>
+Date:   Sat Nov 19 14:53:04 2016 -0500
+
+    Add CSS with white font to UserList views
+
+[33mcommit 95f16e71fb1bce04c380cd271959bdaba3086b11[m
+Merge: d69c469 2b20193
+Author: Brad Kilkenney <bkilkenney@gmail.com>
+Date:   Fri Nov 18 18:51:59 2016 -0500
+
+    Pulling down changes
+
+[33mcommit 2b20193eba3b6d88fd5f88794c3722284ae18425[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Fri Nov 18 14:24:02 2016 -0500
+
+    going to merge
+
+[33mcommit 790632e63313b75010bc30cf27b3d772d46e301f[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Fri Nov 18 14:22:00 2016 -0500
+
+    new branch
+
+[33mcommit d69c4698b8e2a657d6bee292985e816cc6723e4d[m
+Merge: 01cc4f2 a74d39f
+Author: Brad Kilkenney <bkilkenney@gmail.com>
+Date:   Fri Nov 18 14:00:18 2016 -0500
+
+    Combining my repo
+
+[33mcommit 01cc4f2354bf663bd557c65c1a30fc8a7a60815d[m
+Author: Brad Kilkenney <bkilkenney@gmail.com>
+Date:   Fri Nov 18 13:57:06 2016 -0500
+
+    Added Google Map API
+
+[33mcommit 9defebeaf2718cc4c7f242d0190b8735fb1e8257[m
+Merge: a74d39f 9692937
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Fri Nov 18 13:27:01 2016 -0500
+
+    mergeconflict
+
+[33mcommit a74d39f5143d2ffb45a4ef3d6985563c23c78141[m
+Merge: 799fbe7 4b57bd6
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Fri Nov 18 11:54:09 2016 -0500
+
+    another commit
+
+[33mcommit 799fbe70d22fea10b1740993f0ae57e4854c814b[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Fri Nov 18 11:52:21 2016 -0500
+
+    resolve conflict
+
+[33mcommit 96929371b378cd18073a867f005f3b93878c2125[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Fri Nov 18 11:48:55 2016 -0500
+
+    addedListCategory
+
+[33mcommit 4b57bd602c293628501c3da844b6e9fee0bc2557[m
+Merge: 921c088 dbff2f3
+Author: zerrickstaples <zerrick.staples@gmail.com>
+Date:   Fri Nov 18 11:47:05 2016 -0500
+
+    merge...
+
+[33mcommit 921c088ce2841c14ac5421b640fc26135b3b039c[m
+Author: zerrickstaples <zerrick.staples@gmail.com>
+Date:   Fri Nov 18 11:44:36 2016 -0500
+
+    Redirected logins
+
+[33mcommit dbff2f3aaacb93527b7e279497a47e9660039d91[m
+Author: William Green <william.green.iv@gmail.com>
+Date:   Fri Nov 18 11:40:56 2016 -0500
+
+    Contact page updated with L, E and pics
+
+[33mcommit 5f523fbeebac4ca76b5d34d13ed1263359d481fc[m
+Merge: 1769c80 53645b5
+Author: William Green <william.green.iv@gmail.com>
+Date:   Thu Nov 17 14:24:53 2016 -0500
+
+    hello
+
+[33mcommit 1769c8023f788e2504f9935e2862e2e076bb5ec3[m
+Author: William Green <william.green.iv@gmail.com>
+Date:   Thu Nov 17 14:21:11 2016 -0500
+
+    Logo graphic added
+
+[33mcommit 53645b5c40b42bd39a36fce449f8e6545229403b[m
+Author: zerrickstaples <zerrick.staples@gmail.com>
+Date:   Thu Nov 17 14:20:02 2016 -0500
+
+    redirected user login
+
+[33mcommit 7fbd26462198285040dd1a2c4660d93ad224f5bf[m
+Author: zerrickstaples <zerrick.staples@gmail.com>
+Date:   Wed Nov 16 14:59:59 2016 -0500
+
+    valerie's help
+
+[33mcommit 65c86f51fcdeda19e657918d23521d9003d20691[m
+Merge: c0e6923 aeed7c2
+Author: William Green <william.green.iv@gmail.com>
+Date:   Wed Nov 16 11:32:28 2016 -0500
+
+    Resolve merge conflict -added button
+
+[33mcommit c0e69233812bd40646d00ebee4612a7d453c67c6[m
+Author: William Green <william.green.iv@gmail.com>
+Date:   Wed Nov 16 11:26:54 2016 -0500
+
+    Added Register Button
+
+[33mcommit aeed7c276527e647bad2d74d28444a9c7325382f[m
+Merge: d5270fd 0f0fda4
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Wed Nov 16 11:16:03 2016 -0500
+
+    fixed merge conflict
+
+[33mcommit 0f0fda4d1d53e23432f36990fa0e32c2cf1384e1[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Wed Nov 16 11:07:57 2016 -0500
+
+    FK list-user fixed all controllers added
+
+[33mcommit d5270fdea4f86d90b0339e97451672b0378f08db[m
+Merge: 6fad0cb 85615f8
+Author: William Green <william.green.iv@gmail.com>
+Date:   Tue Nov 15 10:47:30 2016 -0500
+
+    Merge branch 'master' of https://github.com/BucketListWCCI/BucketList
+
+[33mcommit 6fad0cb3939b9245cc5f017d64d4cf83ab593c4a[m
+Author: William Green <william.green.iv@gmail.com>
+Date:   Tue Nov 15 10:45:45 2016 -0500
+
+    Home page images, Title FadeIn
+
+[33mcommit 85615f8a0951b09e75d427197d97d7d5c4a28b30[m
+Merge: 5840121 9291f56
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Mon Nov 14 11:32:14 2016 -0500
+
+    merge conflict
+
+[33mcommit 584012147d1d562a88f1f03e23b5b83377f4b698[m
+Author: William Green <william.green.iv@gmail.com>
+Date:   Mon Nov 14 09:54:26 2016 -0500
+
+    Homepage Visual round 1
+
+[33mcommit 9291f56638edbbf634ccfcf76a10d857a58901fc[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Sun Nov 13 17:00:10 2016 -0500
+
+    created sportstype modelcontroller
+
+[33mcommit aea0b1283ae64887f7745d77046d4d209188d7a9[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Sun Nov 13 16:53:05 2016 -0500
+
+    created shoppingtype modelcontroller
+
+[33mcommit d144532a50389fa952bac411180d024ca715f970[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Sun Nov 13 16:44:39 2016 -0500
+
+    created museumtype modelcontroller
+
+[33mcommit 62063e524bfcd0fb119f2938fa00efd1804ff40a[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Sun Nov 13 15:55:47 2016 -0500
+
+    created museumtype modelcontroller
+
+[33mcommit 5fd2aed7ace156d668e435ee6f54f6f0894f5b88[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Sun Nov 13 15:35:51 2016 -0500
+
+    created entertainment type controller
+
+[33mcommit c092daf9247c6bb464bf2e09fabb1720f0bb42ec[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Sun Nov 13 14:40:26 2016 -0500
+
+    created entertainment type model
+
+[33mcommit ff86b61323cc1d01d7651180875c7bf37067c6db[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Sun Nov 13 14:28:59 2016 -0500
+
+    recreated controllers and views
+
+[33mcommit 659f8f0591500189676ec89ac6ab8bac66e8f89a[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Sun Nov 13 14:22:01 2016 -0500
+
+    removed types from model-deleted control-views
+
+[33mcommit bdc2ebbd446323c370550775aaea0f2a52efe4b8[m
+Author: William Green <william.green.iv@gmail.com>
+Date:   Fri Nov 11 14:20:13 2016 -0500
+
+    jumbrotron edit
+
+[33mcommit 804c4bba6502b6eda274167578e57cd8fa4404a3[m
+Author: William Green <william.green.iv@gmail.com>
+Date:   Fri Nov 11 14:12:49 2016 -0500
+
+    Message
+
+[33mcommit 581faf6f8cef23b805387057357786450ec45395[m
+Merge: e1f8c8b 1810b42
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Fri Nov 11 13:42:31 2016 -0500
+
+    Merge branch 'PullingDownControllers'
+
+[33mcommit e1f8c8b1f1121e6dd125e2b39eed59fa2501918e[m
+Merge: adb58d4 148f646
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Fri Nov 11 13:39:52 2016 -0500
+
+    Merge branch 'master' of https://github.com/BucketListWCCI/BucketList
+
+[33mcommit 1810b42cca07549d4fa52b05ea87bfc9a3f811ce[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Fri Nov 11 13:38:36 2016 -0500
+
+    Changed landing page, and added log-in button
+
+[33mcommit 9196f04a17f418a249286e068666582b54e5b1ef[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Fri Nov 11 11:48:23 2016 -0500
+
+    Pulled down all controllers
+
+[33mcommit 448360f6a67d19e824e31af6c4afc8514f744d04[m
+Merge: adb58d4 148f646
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Thu Nov 10 14:09:01 2016 -0500
+
+    Merge branch 'master' of https://github.com/BucketListWCCI/BucketList into PullingDownControllers
+
+[33mcommit 148f646c493ef4b7c551f2cc55961a91967bcb0a[m
+Merge: ed6dd6d e34f864
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Thu Nov 10 14:05:01 2016 -0500
+
+    ignore merge errors
+
+[33mcommit e34f864cc8a316dc715e4450a48710cf17b25659[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Thu Nov 10 13:56:43 2016 -0500
+
+    allmodels-controllers
+
+[33mcommit adb58d4f1e46ce340170476987074eb8a4e5b409[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Thu Nov 10 11:46:30 2016 -0500
+
+    Commiting 1 outstanding file
+
+[33mcommit ed6dd6d8eaa87ec4b2f1aa6d3367663e29224924[m
+Author: zerrickstaples <zerrick.staples@gmail.com>
+Date:   Thu Nov 10 11:20:28 2016 -0500
+
+    API add
+
+[33mcommit af7b544c02a3412199786d160b1ee3a2dc16eae0[m
+Author: zerrickstaples <zerrick.staples@gmail.com>
+Date:   Thu Nov 10 09:53:27 2016 -0500
+
+    try to commit
+
+[33mcommit b4cf69e40e3839b08269af27834509fdaed46d44[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Wed Nov 9 14:29:46 2016 -0500
+
+    2 models working
+
+[33mcommit e8497d88f822f2b0df4aecf42e865414f654d7ff[m
+Author: mskendrae <mskendrae@gmail.com>
+Date:   Wed Nov 9 11:16:43 2016 -0500
+
+    add userproperties
+
+[33mcommit 9bd3418ea365b29e6e8c2644cb79b410f2184ec2[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Wed Nov 9 10:14:31 2016 -0500
+
+    Added ShoppingController
+
+[33mcommit 715ba31773f6f6e1084a1531c6bca7e342f1626d[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Wed Nov 9 08:26:49 2016 -0500
+
+    Made changes that should set up fk relationship on db create
+
+[33mcommit 29cb5226ffc7534e9ccff85ad71c85de24a55c67[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Wed Nov 9 08:04:24 2016 -0500
+
+    Added random comment for testing git purposes
+
+[33mcommit 75fa9516bbdd2ec8888e8f3a1cc2f164efae0b66[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 18:45:17 2016 -0500
+
+    Updated Shopping class
+
+[33mcommit 732a5c33937d15ecf50ac48bc3b8209935587440[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 18:28:04 2016 -0500
+
+    Have a shopping table that should use Id from ApplicationUser as FK
+
+[33mcommit 5d1c755ee58723184dff5edc40a539cdea4eef1e[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 17:36:13 2016 -0500
+
+    Updated the Shopping class
+
+[33mcommit 4bfb3491752c7749c1570cfd72a8e8320f893432[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 17:21:06 2016 -0500
+
+    Updated nuget packages
+
+[33mcommit cedd85531ac5ef4113ad000622484f1498231905[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 16:15:47 2016 -0500
+
+    Having trouble logging in
+
+[33mcommit b0739aea9743f3deb0801168705ba6c9700898ed[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 16:11:04 2016 -0500
+
+    Added Shopping Class and Migration
+
+[33mcommit 93888c70f0730b10a5ac7fb0d53fab10f449c230[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 16:00:08 2016 -0500
+
+    Added properties to Shopping Model
+
+[33mcommit c91768e24940375cc3c45f6df0cc74648b5f925c[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 15:52:10 2016 -0500
+
+    Added Shopping Class
+
+[33mcommit 7cbdbafb419ff702384bc575b3d79ed1d1130c44[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 13:31:28 2016 -0500
+
+    Added gitignore
+
+[33mcommit 340495d887467a52f0f1fb11de40130f70856b6e[m
+Author: Brad Kilkenney <bkilkenney@yahoo.com>
+Date:   Tue Nov 8 10:04:05 2016 -0500
+
+    Initial Commit

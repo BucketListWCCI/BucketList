@@ -214,6 +214,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611201852590_FollowingAndFollowers.cs" />
+    <Compile Include="Migrations\201611201852590_FollowingAndFollowers.Designer.cs">
+      <DependentUpon>201611201852590_FollowingAndFollowers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
@@ -381,6 +385,7 @@
     <Content Include="Views\UserLists\Details.cshtml" />
     <Content Include="Views\UserLists\Edit.cshtml" />
     <Content Include="Views\UserLists\Index.cshtml" />
+    <Content Include="Views\UserLists\Follow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -388,6 +393,11 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611201852590_FollowingAndFollowers.resx">
+      <DependentUpon>201611201852590_FollowingAndFollowers.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

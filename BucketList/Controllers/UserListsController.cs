@@ -7,12 +7,53 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BucketList.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BucketList.Controllers
 {
     public class UserListsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
+
+        public ActionResult Follow(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            if (Request.IsAuthenticated)
+            {
+
+                UserList userList = db.UserLists.Find(id);
+                if (userList == null)
+                {
+                    return HttpNotFound();
+                }
+                UserManager<ApplicationUser> UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+                ApplicationUser authorUser = userList.UserName;
+                if (currentUser.Following.Contains(authorUser))
+                {
+                    ViewBag.content = "You are already following this user";
+                }
+                else
+                {
+                    currentUser.Following.Add(authorUser);
+                    ViewBag.content = "You are now following this user";
+                    db.SaveChanges();
+                }
+            }
+            return View();
+        }
+
+
+
+
+
+
 
         // GET: UserLists
         public ActionResult Index()

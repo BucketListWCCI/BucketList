@@ -21,7 +21,11 @@ namespace BucketList.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Bio { get; set; }
-        
+
+        [ScriptIgnore]
+        public virtual ICollection<ApplicationUser> Followers { get; set; }
+        public virtual ICollection<ApplicationUser> Following { get; set; }
+
 
         //[ForeignKey("UserList")]
         //public int ListId { get; set; }
@@ -35,9 +39,7 @@ namespace BucketList.Models
             return userIdentity;
         }
 
-        [ScriptIgnore]
-        public virtual ICollection<ApplicationUser> Followers { get; set; }
-        public virtual ICollection<ApplicationUser> Following { get; set; }
+        
 
     }
 
