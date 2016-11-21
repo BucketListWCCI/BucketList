@@ -69,6 +69,11 @@ nav navbar-nav {
     color:black;
     background-color: lightgray; opacity:0.8;
     text-align:center;
+    margin-bottom: 20px;
+                                                                                                                        
+}
+#kenZer {
+    padding-bottom: 30px;
 }
 #description{
     padding: 0px;
@@ -81,7 +86,8 @@ nav navbar-nav {
     visibility:visible;
 }
 #contactLogo {
-    text-align:center;
+    text-align:center;  
+    margin-bottom: 50px;
 }
 .divider{
     width:3px;
