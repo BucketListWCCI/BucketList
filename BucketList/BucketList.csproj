@@ -214,9 +214,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611211444108_fixBrokenPull.cs" />
-    <Compile Include="Migrations\201611211444108_fixBrokenPull.Designer.cs">
-      <DependentUpon>201611211444108_fixBrokenPull.cs</DependentUpon>
+    <Compile Include="Migrations\201611211637493_NewMigration.cs" />
+    <Compile Include="Migrations\201611211637493_NewMigration.Designer.cs">
+      <DependentUpon>201611211637493_NewMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -243,7 +243,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="Favicon.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -258,7 +257,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Images\Zerricksmall.jpg" />
+    <Content Include="Images\BucketListCleveland.png" />
+    <Content Include="Images\BucketListClevelandsmall.png" />
+    <Content Include="Images\Squad.jpg" />
     <Content Include="Scripts\city.list.us.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
@@ -395,8 +396,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611211444108_fixBrokenPull.resx">
-      <DependentUpon>201611211444108_fixBrokenPull.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611211637493_NewMigration.resx">
+      <DependentUpon>201611211637493_NewMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
