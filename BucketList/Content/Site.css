@@ -167,7 +167,13 @@ textarea {
 #map {
    width: 25%;
    height: 200px;
-   position: absolute;
+   position:absolute;
    bottom: 10px;
+   padding-top: 5px;
    /*background-color: grey;*/
  }
+
+h5{
+    font-weight:bold;
+    font-size:large
+}
