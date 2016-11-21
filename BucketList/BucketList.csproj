@@ -218,6 +218,10 @@
     <Compile Include="Migrations\201611202158128_SwitchedBackToMaster.Designer.cs">
       <DependentUpon>201611202158128_SwitchedBackToMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611211526457_New.cs" />
+    <Compile Include="Migrations\201611211526457_New.Designer.cs">
+      <DependentUpon>201611211526457_New.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
@@ -397,6 +401,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611202158128_SwitchedBackToMaster.resx">
       <DependentUpon>201611202158128_SwitchedBackToMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611211526457_New.resx">
+      <DependentUpon>201611211526457_New.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

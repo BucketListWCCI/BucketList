@@ -25,7 +25,7 @@
 
                 <p><h5>@Html.DisplayNameFor(model => model.ItemCategory)</h5> @Html.DisplayFor(modelItem => item.ItemCategory)</p>
 
-                <p><h5>@Html.DisplayNameFor(model => model.Link)</h5> @Html.DisplayFor(modelItem => item.Link)</p>
+                <p><h5>@Html.DisplayNameFor(model => model.Link)</h5> <a href="http://@item.Link" target="_blank">@item.Link</a></p>
 
                 <p><h5>@Html.DisplayNameFor(model => model.Location)</h5> @Html.DisplayFor(modelItem => item.Location)</p>
 
