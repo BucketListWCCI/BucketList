@@ -16,13 +16,17 @@ namespace BucketList.Models
         public string ItemCategory { get; set; }
         public string Link { get; set; }
         public string Location { get; set; }
+
+        [Display(Name ="Complete")]
         public bool UserIsComplete { get; set; }
         public ICollection<ApplicationUser> ApplicationUser { get; set; }
 
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserId { get; set; }
         public virtual ApplicationUser UserName { get; set; }
-        
+
+
+        [Display(Name ="Category")]
         [ForeignKey("ListCategories")]
         public int ListCategoryId { get; set; }
         public virtual ListCategory ListCategories { get; set; }

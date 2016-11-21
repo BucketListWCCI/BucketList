@@ -214,7 +214,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-
+    <Compile Include="Migrations\201611202158128_SwitchedBackToMaster.cs" />
+    <Compile Include="Migrations\201611202158128_SwitchedBackToMaster.Designer.cs">
+      <DependentUpon>201611202158128_SwitchedBackToMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611211526457_New.cs" />
+    <Compile Include="Migrations\201611211526457_New.Designer.cs">
+      <DependentUpon>201611211526457_New.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
@@ -240,6 +247,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Favicon.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -254,6 +262,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\city.list.us.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
     <Content Include="Images\Bradsmall.png" />
@@ -262,11 +271,11 @@
     <Content Include="Images\bucketlistwhite.png" />
     <Content Include="Images\Cleveland.jpg" />
     <Content Include="Images\clevlandbkgrnd.jpg" />
-    <Content Include="Images\HeadShotsmall.png" />
     <Content Include="Images\Kendrasmall.jpg" />
     <Content Include="Images\TopLogoBlack.ico" />
     <Content Include="Images\TopLogoBlack.png" />
     <Content Include="Images\TopLogoWhite.png" />
+    <Content Include="Images\Willsmall.jpg" />
     <Content Include="Images\Zerricksmall.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -389,7 +398,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
- 
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611202158128_SwitchedBackToMaster.resx">
+      <DependentUpon>201611202158128_SwitchedBackToMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611211526457_New.resx">
+      <DependentUpon>201611211526457_New.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
