@@ -258,6 +258,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Images\Zerricksmall.jpg" />
     <Content Include="Scripts\city.list.us.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
@@ -272,7 +273,6 @@
     <Content Include="Images\TopLogoBlack.png" />
     <Content Include="Images\TopLogoWhite.png" />
     <Content Include="Images\Willsmall.jpg" />
-    <Content Include="Images\Zerricksmall.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />

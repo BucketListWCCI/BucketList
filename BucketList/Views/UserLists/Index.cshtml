@@ -13,21 +13,21 @@
 </p>
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.ListCategories.ListCategories)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.ItemCategory)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Link)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Location)
         </th>
@@ -42,21 +42,21 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.ListCategories.ListCategories)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Description)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.ItemCategory)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Link)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Location)
         </td>
