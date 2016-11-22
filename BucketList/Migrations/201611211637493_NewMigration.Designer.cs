@@ -7,13 +7,13 @@ namespace BucketList.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class SwitchedBackToMaster : IMigrationMetadata
+    public sealed partial class NewMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SwitchedBackToMaster));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NewMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611202158128_SwitchedBackToMaster"; }
+            get { return "201611211637493_NewMigration"; }
         }
         
         string IMigrationMetadata.Source

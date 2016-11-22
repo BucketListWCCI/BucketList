@@ -240,3 +240,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/BucketList/Migrations/201611211444108_fixBrokenPull.cs
+/BucketList/Migrations/201611211444108_fixBrokenPull.Designer.cs
+/BucketList/Migrations/201611211444108_fixBrokenPull.resx

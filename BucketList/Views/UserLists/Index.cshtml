@@ -14,30 +14,31 @@
 {
     <div class="col-sm-4 col-md-4 col-lg-4">
         <div class="thumbnail">
+            <div id="listBG">
+                <div class="caption">
 
-            <div class="caption">
+                    @*<p><h5>@Html.DisplayNameFor(model => model.ListCategories.ListCategories)</h5> @Html.DisplayFor(modelItem => item.ListCategories.ListCategories)</p>*@
 
-                <p><h5>@Html.DisplayNameFor(model => model.ListCategories.ListCategories)</h5> @Html.DisplayFor(modelItem => item.ListCategories.ListCategories)</p>
+                    <p><h5>@Html.DisplayNameFor(model => model.Title)</h5> @Html.DisplayFor(modelItem => item.Title)</p>
 
-                <p><h5>@Html.DisplayNameFor(model => model.Title)</h5> @Html.DisplayFor(modelItem => item.Title)</p>
+                    <p><h5>@Html.DisplayNameFor(model => model.Description)</h5> @Html.DisplayFor(modelItem => item.Description)</p>
 
-                <p><h5>@Html.DisplayNameFor(model => model.Description)</h5> @Html.DisplayFor(modelItem => item.Description)</p>
+                    @*<p><h5>@Html.DisplayNameFor(model => model.ItemCategory)</h5> @Html.DisplayFor(modelItem => item.ItemCategory)</p>*@
 
-                <p><h5>@Html.DisplayNameFor(model => model.ItemCategory)</h5> @Html.DisplayFor(modelItem => item.ItemCategory)</p>
+                    @*<p><h5>@Html.DisplayNameFor(model => model.Link)</h5> @Html.DisplayFor(modelItem => item.Link)</p>*@
 
-                <p><h5>@Html.DisplayNameFor(model => model.Link)</h5> <a href="http://@item.Link" target="_blank">@item.Link</a></p>
+                    <p><h5>@Html.DisplayNameFor(model => model.Location)</h5> @Html.DisplayFor(modelItem => item.Location)</p>
 
-                <p><h5>@Html.DisplayNameFor(model => model.Location)</h5> @Html.DisplayFor(modelItem => item.Location)</p>
+                    <p><h5>@Html.DisplayNameFor(model => model.UserIsComplete)</h5> @Html.DisplayFor(modelItem => item.UserIsComplete)</p>
 
-                <p><h5>@Html.DisplayNameFor(model => model.UserIsComplete)</h5> @Html.DisplayFor(modelItem => item.UserIsComplete)</p>
-
-                <p><h5>@Html.DisplayNameFor(model => model.ApplicationUserId)</h5> @Html.DisplayFor(modelItem => item.ApplicationUserId)</p>
+                    @*<p><h5>@Html.DisplayNameFor(model => model.ApplicationUserId)</h5> @Html.DisplayFor(modelItem => item.ApplicationUserId)</p>*@
 
 
-                @Html.ActionLink("Edit", "Edit", new { id = item.ListId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ListId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ListId })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ListId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ListId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ListId })
 
+                </div>
             </div>
         </div>
     </div>

@@ -10,10 +10,13 @@ body {
     color:black;
     font-weight:900;
     text-align:center;
-    padding-top:75px;
+    padding-top:0px;
     background-color: transparent;
 }
 
+#categoryDropdown {
+    color:black;
+}
 nav navbar-nav {
     font-weight:900;
 }
@@ -169,8 +172,11 @@ textarea {
    padding-top: 5px;
    /*background-color: grey;*/
  }
-
+#listBG {
+   background-color: lightgray
+}
 h5{
     font-weight:bold;
-    font-size:large
+    font-size:large;
+    color:blue;
 }
