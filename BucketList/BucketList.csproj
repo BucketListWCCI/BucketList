@@ -262,6 +262,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Images\BucketList500.PNG" />
     <Content Include="Scripts\city.list.us.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
@@ -390,6 +391,8 @@
     <Content Include="Views\UserLists\Details.cshtml" />
     <Content Include="Views\UserLists\Edit.cshtml" />
     <Content Include="Views\UserLists\Index.cshtml" />
+    <Content Include="Views\Museums\AddToUserList.cshtml" />
+    <Content Include="Views\Museums\SeeWhoElse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
