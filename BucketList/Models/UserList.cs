@@ -14,6 +14,8 @@ namespace BucketList.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string ItemCategory { get; set; }
+
+        [Display(Name ="Website")]
         public string Link { get; set; }
         public string Location { get; set; }
 
