@@ -14,12 +14,104 @@ body {
     background-color: transparent;
 }
 
-#categoryDropdown {
-    color:black;
-}
+
 nav navbar-nav {
     font-weight:900;
 }
+
+
+.divider{
+    width:3px;
+    height:0px;
+    display:inline-block;
+}
+
+
+.navbar {
+    background-color:transparent;
+}
+ul a{
+    color:black;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+h5{
+    font-weight:bold;
+    font-size:large;
+    color:blue;
+}
+
+#footer {
+    color:ghostwhite;
+    font-family: 'Shrikhand', cursive;
+}
+#teamPhoto {
+    text-align:center;
+}
+#team {
+    color:black;
+    background-color: lightgray; opacity:0.8;
+    text-align:center;
+    margin-bottom: 20px;
+                                                                                                                        
+}
+#logo {
+    max-width: 100%;
+    height: auto;
+}
+#kenZer {
+    padding-bottom: 30px;
+}
+#description{
+    padding: 0px;
+    text-align:center;
+    color: ghostwhite;
+    font-family: 'Shrikhand', cursive;
+}
+
+#loginbutton {
+    text-align: center;
+    visibility:visible;
+}
+#contactLogo {
+    text-align:center;  
+    margin-bottom: 50px;
+}
+#map {
+   width: 25%;
+   height: 200px;
+   position:absolute;
+   bottom: 10px;
+   padding-top: 5px;
+   /*background-color: grey;*/
+ }
+#categoryDropdown {
+    color:black;
+}
+#listBG {
+   background-color: lightgray;
+}
+
 .pulse{
     animation-delay: 3s;
 	animation-name: pulse;
@@ -61,42 +153,7 @@ nav navbar-nav {
 		opacity: 0.8;	
 	}			
 }
-#footer {
-    color:ghostwhite;
-    font-family: 'Shrikhand', cursive;
-}
-#teamPhoto {
-    text-align:center;
-}
-#team {
-    color:black;
-    background-color: lightgray; opacity:0.8;
-    text-align:center;
-    margin-bottom: 20px;
-                                                                                                                        
-}
-#kenZer {
-    padding-bottom: 30px;
-}
-#description{
-    padding: 0px;
-    text-align:center;
-    color: ghostwhite;
-    font-family: 'Shrikhand', cursive;
-}
-#loginbutton {
-    text-align: center;
-    visibility:visible;
-}
-#contactLogo {
-    text-align:center;  
-    margin-bottom: 50px;
-}
-.divider{
-    width:3px;
-    height:0px;
-    display:inline-block;
-}
+
 #fade  {
     margin-top: 25px;
     text-align: center;
@@ -137,46 +194,5 @@ nav navbar-nav {
     to   { opacity: 1; }
 }
 
-.navbar {
-    background-color:transparent;
-}
-ul a{
-    color:black;
-}
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
-}
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
 
 
-#map {
-   width: 25%;
-   height: 200px;
-   position:absolute;
-   bottom: 10px;
-   padding-top: 5px;
-   /*background-color: grey;*/
- }
-#listBG {
-   background-color: lightgray
-}
-h5{
-    font-weight:bold;
-    font-size:large;
-    color:blue;
-}
