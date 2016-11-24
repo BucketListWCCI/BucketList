@@ -1,5 +1,4 @@
 ﻿<link href="~/Content/UserListSS.css" rel="stylesheet" />
-
 @model IEnumerable<BucketList.Models.UserList>
 
 @{
@@ -35,11 +34,11 @@
                         <h5>@Html.DisplayNameFor(m => m.UserIsComplete)</h5>
                             @if (item.UserIsComplete)
                             {
-                                <span class="glyphicon glyphicon-check"></span>
+                                <span class="fa fa-graduation-cap fa-lg" aria-hidden="true"></span>
                             }
                             else
                             {
-                                <span class="glyphicon glyphicon-unchecked"></span>
+                                <span class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></span>                               
                             }
 
                        
@@ -48,9 +47,9 @@
                     @*<p><h5>@Html.DisplayNameFor(model => model.ApplicationUserId)</h5> @Html.DisplayFor(modelItem => item.ApplicationUserId)</p>*@
                         <br />
 
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ListId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ListId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ListId })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ListId }, new { @class = "btn btn-default btn-sm" }) 
+                    @Html.ActionLink("Details", "Details", new { id = item.ListId }, new { @class = "btn btn-default btn-sm" }) 
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ListId }, new { @class = "btn btn-default btn-sm" }) 
 
                 </div>
             </div>
@@ -59,7 +58,7 @@
 }
 
 
-<div id="map"></div>
+@*<div id="map"></div>*@
 
 
 @*<script>
