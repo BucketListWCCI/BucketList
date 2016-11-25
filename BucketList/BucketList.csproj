@@ -214,13 +214,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611211637493_NewMigration.cs" />
-    <Compile Include="Migrations\201611211637493_NewMigration.Designer.cs">
-      <DependentUpon>201611211637493_NewMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611211526457_New.cs" />
-    <Compile Include="Migrations\201611211526457_New.Designer.cs">
-      <DependentUpon>201611211526457_New.cs</DependentUpon>
+    <Compile Include="Migrations\201611231549421_TryAgain.cs" />
+    <Compile Include="Migrations\201611231549421_TryAgain.Designer.cs">
+      <DependentUpon>201611231549421_TryAgain.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -246,6 +242,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Shopping.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -263,6 +260,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Images\BucketListCleveland.png" />
     <Content Include="Images\BucketListClevelandsmall.png" />
+    <Content Include="Images\shopping_bag_gr.png" />
     <Content Include="Images\Squad.jpg" />
     <Content Include="Scripts\city.list.us.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -400,11 +398,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611211637493_NewMigration.resx">
-      <DependentUpon>201611211637493_NewMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611211526457_New.resx">
-      <DependentUpon>201611211526457_New.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611231549421_TryAgain.resx">
+      <DependentUpon>201611231549421_TryAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
