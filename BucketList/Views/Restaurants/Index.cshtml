@@ -1,10 +1,14 @@
 ﻿@model IEnumerable<BucketList.Models.Restaurants>
+@section AddToHead{
+    
+<link href="~/Content/Restaurant.css" rel="stylesheet" />
+}
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Dining Bucket List Home</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
