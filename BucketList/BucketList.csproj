@@ -214,14 +214,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611202158128_SwitchedBackToMaster.cs" />
-    <Compile Include="Migrations\201611202158128_SwitchedBackToMaster.Designer.cs">
-      <DependentUpon>201611202158128_SwitchedBackToMaster.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611211526457_New.cs" />
-    <Compile Include="Migrations\201611211526457_New.Designer.cs">
-      <DependentUpon>201611211526457_New.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
@@ -393,6 +385,14 @@
     <Content Include="Views\UserLists\Index.cshtml" />
     <Content Include="Views\Museums\AddToUserList.cshtml" />
     <Content Include="Views\Museums\SeeWhoElse.cshtml" />
+    <Content Include="Views\Shoppings\AddToUserList.cshtml" />
+    <Content Include="Views\Shoppings\SeeWhoElse.cshtml" />
+    <Content Include="Views\Entertainments\AddToUserList.cshtml" />
+    <Content Include="Views\Entertainments\SeeWhoElse.cshtml" />
+    <Content Include="Views\Restaurants\AddToUserList.cshtml" />
+    <Content Include="Views\Restaurants\SeeWhoElse.cshtml" />
+    <Content Include="Views\Sports\AddToUserList.cshtml" />
+    <Content Include="Views\Sports\SeeWhoElse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -400,14 +400,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611202158128_SwitchedBackToMaster.resx">
-      <DependentUpon>201611202158128_SwitchedBackToMaster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611211526457_New.resx">
-      <DependentUpon>201611211526457_New.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -53,6 +53,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.RestaurantId }) |
+    @Html.ActionLink("Add To Bucket List", "AddToUserList", new { id = Model.RestaurantId }) |
+    @Html.ActionLink("See Who Else", "SeeWhoElse", new { id = Model.RestaurantId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
