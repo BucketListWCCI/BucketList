@@ -7,6 +7,9 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BucketList.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+
 
 namespace BucketList.Controllers
 {
@@ -33,6 +36,55 @@ namespace BucketList.Controllers
             {
                 return HttpNotFound();
             }
+            return View(entertainment);
+        }
+
+        public ActionResult AddToUserList(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Entertainment entertainment = db.entertainments.Find(id);
+            if (entertainment == null)
+            {
+                return HttpNotFound();
+            }
+
+            UserManager<ApplicationUser> UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+
+            UserList newlist = new UserList();
+            newlist.Title = entertainment.Title;
+            newlist.Description = entertainment.Description;
+            newlist.Link = entertainment.Link;
+            newlist.Location = entertainment.Location;
+            newlist.ListCategoryId = 1;  //have to use # be sure to confirm the numbers in List Categories.
+            newlist.UserName = currentUser;
+            db.UserLists.Add(newlist);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+
+        public ActionResult SeeWhoElse(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Entertainment entertainment = db.entertainments.Find(id);
+            if (entertainment == null)
+            {
+                return HttpNotFound();
+            }
+
+            IQueryable<UserList> whoList = db.UserLists.Where(l => l.Title.ToLower() == entertainment.Title.ToLower());
+            List<ApplicationUser> ids = whoList.Select(i => i.UserName).ToList();
+            ViewBag.whoUser = ids;
+
             return View(entertainment);
         }
 

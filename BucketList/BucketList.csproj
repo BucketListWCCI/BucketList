@@ -214,10 +214,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611231549421_TryAgain.cs" />
-    <Compile Include="Migrations\201611231549421_TryAgain.Designer.cs">
-      <DependentUpon>201611231549421_TryAgain.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
@@ -242,9 +238,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Restaurant.css" />
-    <Content Include="Content\Shopping.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Favicon.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -259,11 +254,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Images\BucketListCleveland.png" />
-    <Content Include="Images\BucketListClevelandsmall.png" />
-    <Content Include="Images\gluten-free-restaurant.jpg" />
-    <Content Include="Images\shopping_bag_gr.png" />
-    <Content Include="Images\Squad.jpg" />
+    <Content Include="Images\BucketList500.PNG" />
     <Content Include="Scripts\city.list.us.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
@@ -278,6 +269,7 @@
     <Content Include="Images\TopLogoBlack.png" />
     <Content Include="Images\TopLogoWhite.png" />
     <Content Include="Images\Willsmall.jpg" />
+    <Content Include="Images\Zerricksmall.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -391,6 +383,16 @@
     <Content Include="Views\UserLists\Details.cshtml" />
     <Content Include="Views\UserLists\Edit.cshtml" />
     <Content Include="Views\UserLists\Index.cshtml" />
+    <Content Include="Views\Museums\AddToUserList.cshtml" />
+    <Content Include="Views\Museums\SeeWhoElse.cshtml" />
+    <Content Include="Views\Shoppings\AddToUserList.cshtml" />
+    <Content Include="Views\Shoppings\SeeWhoElse.cshtml" />
+    <Content Include="Views\Entertainments\AddToUserList.cshtml" />
+    <Content Include="Views\Entertainments\SeeWhoElse.cshtml" />
+    <Content Include="Views\Restaurants\AddToUserList.cshtml" />
+    <Content Include="Views\Restaurants\SeeWhoElse.cshtml" />
+    <Content Include="Views\Sports\AddToUserList.cshtml" />
+    <Content Include="Views\Sports\SeeWhoElse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -398,11 +400,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611231549421_TryAgain.resx">
-      <DependentUpon>201611231549421_TryAgain.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

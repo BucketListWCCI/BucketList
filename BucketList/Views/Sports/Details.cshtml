@@ -33,7 +33,13 @@
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Link)
         </dt>
@@ -45,6 +51,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.SportsId }) |
+    @Html.ActionLink("Add To Bucket List", "AddToUserList", new { id = Model.SportsId }) |
+    @Html.ActionLink("See Who Else", "SeeWhoElse", new { id = Model.SportsId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
