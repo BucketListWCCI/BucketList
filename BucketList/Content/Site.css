@@ -97,14 +97,7 @@ h5{
     text-align:center;  
     margin-bottom: 50px;
 }
-#map {
-   width: 25%;
-   height: 200px;
-   position:absolute;
-   bottom: 10px;
-   padding-top: 5px;
-   /*background-color: grey;*/
- }
+
 #categoryDropdown {
     color:black;
 }
@@ -194,5 +187,66 @@ h5{
     to   { opacity: 1; }
 }
 
+/*Google Maps API*/
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+         #map {
+             margin-left:10px;
+             width: 25%;
+             height: 200px;
+             position:center;
+             bottom: 10px;
+             padding-top: 5px;
+   /*background-color: grey;*/
+         }
+         
 
+         .controls {
+             margin-top: 10px;
+             border: 1px solid transparent;
+             border-radius: 2px 0 0 2px;
+             box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             height: 32px;
+             outline: none;
+             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+             color:black;
+         }
+
+         #pac-input {
+             background-color: ghostwhite;
+             font-family: Roboto;
+             font-size: 15px;
+             font-weight: 300;
+             margin-left: 12px;
+             padding: 0 11px 0 13px;
+             text-overflow: ellipsis;
+             width: 200px;
+         }
+
+             #pac-input:focus {
+                 border-color: #4d90fe;
+             }
+
+         .pac-container {
+             font-family: Roboto;
+         }
+
+         #type-selector {
+             color: #fff;
+             background-color: #4d90fe;
+             padding: 5px 11px 0px 11px;
+         }
+
+             #type-selector label {
+                 font-family: Roboto;
+                 font-size: 13px;
+                 font-weight: 300;
+             }
+
+         #target {
+             width: 345px;
+         }
+    
+/*End Google Maps API*/
 

@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <script src="~/Scripts/map.js"></script>
     <link rel="stylesheet" href="css/animations.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
@@ -71,6 +72,12 @@
             </footer>
         </div>
     </div>
+    @* Google Maps API *@
+    <input id="pac-input" class="controls" type="text" placeholder="Bucket List Destination">
+    <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0HgPFTiuyuSXg_UYoDOX8vV6a2t3c_zg&libraries=places&callback=initAutocomplete"
+            async defer></script>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     @Scripts.Render("~/bundles/jquery")
