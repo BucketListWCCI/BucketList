@@ -6,6 +6,7 @@ body {
     background-size: cover;
     font-family: Aharoni;
 }
+
 .jumbotron {
     color:black;
     font-weight:900;
@@ -14,11 +15,9 @@ body {
     background-color: transparent;
 }
 
-
 nav navbar-nav {
     font-weight:900;
 }
-
 
 .divider{
     width:3px;
@@ -26,10 +25,10 @@ nav navbar-nav {
     display:inline-block;
 }
 
-
 .navbar {
     background-color:transparent;
 }
+
 ul a{
     color:black;
 }
@@ -42,6 +41,7 @@ ul a{
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
+
 .dl-horizontal dt {
     white-space: normal;
 }
@@ -53,8 +53,6 @@ textarea {
     max-width: 280px;
 }
 
-
-
 h5{
     font-weight:bold;
     font-size:large;
@@ -65,9 +63,11 @@ h5{
     color:ghostwhite;
     font-family: 'Shrikhand', cursive;
 }
+
 #teamPhoto {
     text-align:center;
 }
+
 #team {
     color:black;
     background-color: lightgray; opacity:0.8;
@@ -75,13 +75,16 @@ h5{
     margin-bottom: 20px;
                                                                                                                         
 }
+
 #logo {
     max-width: 100%;
     height: auto;
 }
+
 #kenZer {
     padding-bottom: 30px;
 }
+
 #description{
     padding: 0px;
     text-align:center;
@@ -93,10 +96,12 @@ h5{
     text-align: center;
     visibility:visible;
 }
+
 #contactLogo {
     text-align:center;  
     margin-bottom: 50px;
 }
+
 #map {
    width: 25%;
    height: 200px;
@@ -105,9 +110,11 @@ h5{
    padding-top: 5px;
    /*background-color: grey;*/
  }
+
 #categoryDropdown {
     color:black;
 }
+
 #listBG {
    background-color: lightgray;
 }
