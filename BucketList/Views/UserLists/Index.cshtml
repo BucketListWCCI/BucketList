@@ -1,4 +1,5 @@
 ﻿<link href="~/Content/UserListSS.css" rel="stylesheet" />
+<script src="~/Scripts/map.js"></script>
 @model IEnumerable<BucketList.Models.UserList>
 
 @{
@@ -57,21 +58,9 @@
     </div>
 }
 
+@* Google Maps API 
+<input id="pac-input" class="controls" type="text" placeholder="Bucket List Destination">
+<div id="map"></div>
 
-@*<div id="map"></div>*@
-
-
-@*<script>
-        //var map;
-        function initMap() {
-            //constructor creates a new map - only center and zoom are required.
-            var map = new google.maps.Map(document.getElementById('map'),
-                {
-                    center: { lat: 41.505493, lng: -81.681290 },
-                    zoom: 10
-                })
-        }
-    </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0HgPFTiuyuSXg_UYoDOX8vV6a2t3c_zg&callback=initMap">
-    </script>*@
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0HgPFTiuyuSXg_UYoDOX8vV6a2t3c_zg&libraries=places&callback=initAutocomplete"
+        async defer></script>*@
