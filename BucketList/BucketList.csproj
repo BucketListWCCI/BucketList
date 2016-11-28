@@ -214,6 +214,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611281442476_migration.cs" />
+    <Compile Include="Migrations\201611281442476_migration.Designer.cs">
+      <DependentUpon>201611281442476_migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entertainment.cs" />
@@ -269,7 +273,6 @@
     <Content Include="Images\TopLogoBlack.png" />
     <Content Include="Images\TopLogoWhite.png" />
     <Content Include="Images\Willsmall.jpg" />
-    <Content Include="Images\Zerricksmall.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -400,6 +403,11 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611281442476_migration.resx">
+      <DependentUpon>201611281442476_migration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

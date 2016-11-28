@@ -4,8 +4,9 @@ body {
     padding-bottom: 20px;
     background-image: url('../Images/clevlandbkgrnd.jpg');
     background-size: cover;
-    font-family: Aharoni;
-}
+    font-family: 'Acme', sans-serif;
+    }
+
 
 .jumbotron {
     color:black;
@@ -13,12 +14,23 @@ body {
     text-align:center;
     padding-top:0px;
     background-color: transparent;
+
+}
+
+#aboutStory {
+    color:black;
+    background-color: lightgray;
+    text-align:center;
+    margin-bottom: 20px;
 }
 
 nav navbar-nav {
     font-weight:900;
+    font-size:14px;
 }
-
+.caption {
+    font-size: 20px;
+}
 .divider{
     width:3px;
     height:0px;
@@ -53,7 +65,7 @@ textarea {
     max-width: 280px;
 }
 
-h5{
+h6{
     font-weight:bold;
     font-size:large;
     color:blue;
@@ -70,9 +82,10 @@ h5{
 
 #team {
     color:black;
-    background-color: lightgray; opacity:0.8;
+    background-color: lightgray;
     text-align:center;
-    margin-bottom: 20px;
+
+    line-height: 150%;
                                                                                                                         
 }
 
@@ -97,7 +110,7 @@ h5{
     visibility:visible;
 }
 
-#contactLogo {
+#contactLogo, #aboutLogo {
     text-align:center;  
     margin-bottom: 50px;
 }

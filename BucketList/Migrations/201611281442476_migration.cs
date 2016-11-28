@@ -3,7 +3,7 @@ namespace BucketList.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class TryAgain : DbMigration
+    public partial class migration : DbMigration
     {
         public override void Up()
         {
@@ -227,6 +227,7 @@ namespace BucketList.Migrations
                         Title = c.String(),
                         Description = c.String(),
                         Link = c.String(),
+                        Location = c.String(),
                         SportTypeId = c.Int(nullable: false),
                         User_Id = c.String(maxLength: 128),
                     })
