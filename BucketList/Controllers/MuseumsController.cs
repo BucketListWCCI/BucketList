@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BucketList.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BucketList.Controllers
 {
@@ -36,8 +38,56 @@ namespace BucketList.Controllers
             return View(museum);
         }
 
+        public ActionResult AddToUserList(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Museum museum = db.museums.Find(id);
+            if (museum == null)
+            {
+                return HttpNotFound();
+            }
+          
+            UserManager<ApplicationUser> UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+
+            UserList newlist = new UserList();
+            newlist.Title = museum.Title;
+            newlist.Description = museum.Description;
+            newlist.Link = museum.Link;
+            newlist.Location = museum.Location;
+            newlist.ListCategoryId = 1;  //have to use # be sure to confirm the numbers in List Categories.
+            newlist.UserName = currentUser;
+            db.UserLists.Add(newlist);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
 
 
+        public ActionResult SeeWhoElse(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Museum museum = db.museums.Find(id);
+            if (museum == null)
+            {
+                return HttpNotFound();
+            }
+
+            IQueryable<UserList> whoList = db.UserLists.Where(l => l.Title.ToLower() == museum.Title.ToLower());
+            List<ApplicationUser> ids = whoList.Select(i => i.UserName).ToList();
+            ViewBag.whoUser = ids;
+
+
+
+
+            return View(museum);
+        }
         // GET: Museums/Create
         public ActionResult Create()
         {

@@ -7,83 +7,71 @@
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>UserList</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ListCategories.ListCategories)
-        </dt>
+<h3>Are you sure you want to remove this item from your Bucket List?</h3>
+<div class="col-sm-4 col-md-4 col-lg-4">
+    <div class="thumbnail">
+        <div id="listBG">
+            <div class="caption">
 
-        <dd>
-            @Html.DisplayFor(model => model.ListCategories.ListCategories)
-        </dd>
+                @*<p>
+                        <h5>@Html.DisplayNameFor(model => model.ListCategories.ListCategories)</h5>
+                        @Html.DisplayFor(model => model.ListCategories.ListCategories)
+                    </p>*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+                <p>
+                    <h5>@Html.DisplayNameFor(model => model.Title)</h5>
+                    @Html.DisplayFor(model => model.Title)
+                </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
+                <p>
+                    <h5>@Html.DisplayNameFor(model => model.Description)</h5>
+                    @Html.DisplayFor(model => model.Description)
+                </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemCategory)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ItemCategory)
-        </dd>
+                @*<p>
+                    <h5>@Html.DisplayNameFor(model => model.ItemCategory)</h5>
+                    @Html.DisplayFor(model => model.ItemCategory)
+                </p>*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Link)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Link)
-        </dd>
+                <p>
+                    <h5>@Html.DisplayNameFor(model => model.Link)</h5>
+                    @Html.DisplayFor(model => model.Link)
+                </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
+                <p>
+                    <h5>@Html.DisplayNameFor(model => model.Location)</h5>
+                    @Html.DisplayFor(model => model.Location)
+                </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UserIsComplete)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.UserIsComplete)
-        </dd>
+                @*<p>
+                        <h5>@Html.DisplayNameFor(model => model.UserIsComplete)</h5>
+                        @Html.DisplayFor(model => model.UserIsComplete)
+                    </p>*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ApplicationUserId)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ApplicationUserId)
-        </dd>
+                @*<p>
+                        <h5>@Html.DisplayNameFor(model => model.ApplicationUserId)</h5>
+                        @Html.DisplayFor(model => model.ApplicationUserId)
+                    </p>*@
 
-    </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+                @using (Html.BeginForm())
+            {
+                    @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                        <input type="submit" value="Delete" class="btn btn-default btn-sm" />
+                        
+                    <div class="form-actions no-color">
+                    </div>
+                }
+                @Html.ActionLink("Back to List", "Index")
+            </div>
         </div>
-    }
+    </div>
 </div>

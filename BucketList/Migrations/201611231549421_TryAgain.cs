@@ -3,7 +3,7 @@ namespace BucketList.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class NewMigration : DbMigration
+    public partial class TryAgain : DbMigration
     {
         public override void Up()
         {
