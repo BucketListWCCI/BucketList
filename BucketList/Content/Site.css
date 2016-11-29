@@ -4,7 +4,8 @@ body {
     padding-bottom: 20px;
     background-image: url('../Images/clevlandbkgrnd.jpg');
     background-size: cover;
-    font-family: Aharoni;
+    font-family: 'Acme', sans-serif;
+
 }
 .jumbotron {
     color:black;
@@ -14,7 +15,15 @@ body {
     background-color: transparent;
 }
 
+.caption{
+    font-size:23px;
+}
 
+#aboutContent{
+    color:black;
+    background-color: lightgray; 
+    padding-bottom:20px;
+}
 nav navbar-nav {
     font-weight:900;
 }
@@ -70,7 +79,7 @@ h5{
 }
 #team {
     color:black;
-    background-color: lightgray; opacity:0.8;
+    background-color: lightgray; 
     text-align:center;
     margin-bottom: 20px;
                                                                                                                         

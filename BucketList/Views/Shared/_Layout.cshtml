@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/animations.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="https://use.fontawesome.com/d224b0bb01.js"></script>
@@ -64,22 +66,26 @@
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
+
+        @* Google Maps API *@
+        <input id="pac-input" class="controls" type="text" placeholder="Bucket List Destination">
+        <div id="map"></div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0HgPFTiuyuSXg_UYoDOX8vV6a2t3c_zg&libraries=places&callback=initAutocomplete"
+                async defer></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
         <div id="footer">
             <footer>
                 <p>&copy; @DateTime.Now.Year - 216 Enterprises</p>
             </footer>
         </div>
     </div>
-    @* Google Maps API *@
-    <input id="pac-input" class="controls" type="text" placeholder="Bucket List Destination">
-    <div id="map"></div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0HgPFTiuyuSXg_UYoDOX8vV6a2t3c_zg&libraries=places&callback=initAutocomplete"
-            async defer></script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
