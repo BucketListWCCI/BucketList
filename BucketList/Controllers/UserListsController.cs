@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BucketList.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BucketList.Controllers
 {
@@ -17,8 +19,18 @@ namespace BucketList.Controllers
         // GET: UserLists
         public ActionResult Index()
         {
-            var userLists = db.UserLists.Include(u => u.ListCategories);
-            return View(userLists.ToList());
+            if (Request.IsAuthenticated)
+            {
+
+
+                UserManager<ApplicationUser> UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+
+                List<UserList> userLists = db.UserLists.Where(u => u.ApplicationUserId == currentUser.Id).ToList();
+
+                return View(userLists);
+            }
+            return Redirect("/home/index");
         }
 
         // GET: UserLists/Details/5
@@ -52,6 +64,9 @@ namespace BucketList.Controllers
         {
             if (ModelState.IsValid)
             {
+                UserManager<ApplicationUser> UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+                userList.ApplicationUserId = currentUser.Id;
                 db.UserLists.Add(userList);
                 db.SaveChanges();
                 return RedirectToAction("Index");
