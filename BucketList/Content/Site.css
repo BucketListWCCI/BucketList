@@ -4,43 +4,32 @@ body {
     padding-bottom: 20px;
     background-image: url('../Images/clevlandbkgrnd.jpg');
     background-size: cover;
-    font-family: 'Acme', sans-serif;
-    }
-
-
+    font-family: Aharoni;
+}
 .jumbotron {
     color:black;
     font-weight:900;
     text-align:center;
     padding-top:0px;
     background-color: transparent;
-
 }
 
-#aboutStory {
-    color:black;
-    background-color: lightgray;
-    text-align:center;
-    margin-bottom: 20px;
-}
 
 nav navbar-nav {
     font-weight:900;
-    font-size:14px;
 }
-.caption {
-    font-size: 20px;
-}
+
+
 .divider{
     width:3px;
     height:0px;
     display:inline-block;
 }
 
+
 .navbar {
     background-color:transparent;
 }
-
 ul a{
     color:black;
 }
@@ -53,7 +42,6 @@ ul a{
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-
 .dl-horizontal dt {
     white-space: normal;
 }
@@ -65,7 +53,9 @@ textarea {
     max-width: 280px;
 }
 
-h6{
+
+
+h5{
     font-weight:bold;
     font-size:large;
     color:blue;
@@ -75,29 +65,23 @@ h6{
     color:ghostwhite;
     font-family: 'Shrikhand', cursive;
 }
-
 #teamPhoto {
     text-align:center;
 }
-
 #team {
     color:black;
-    background-color: lightgray;
+    background-color: lightgray; opacity:0.8;
     text-align:center;
-
-    line-height: 150%;
+    margin-bottom: 20px;
                                                                                                                         
 }
-
 #logo {
     max-width: 100%;
     height: auto;
 }
-
 #kenZer {
     padding-bottom: 30px;
 }
-
 #description{
     padding: 0px;
     text-align:center;
@@ -109,25 +93,14 @@ h6{
     text-align: center;
     visibility:visible;
 }
-
-#contactLogo, #aboutLogo {
+#contactLogo {
     text-align:center;  
     margin-bottom: 50px;
 }
 
-#map {
-   width: 25%;
-   height: 200px;
-   position:absolute;
-   bottom: 10px;
-   padding-top: 5px;
-   /*background-color: grey;*/
- }
-
 #categoryDropdown {
     color:black;
 }
-
 #listBG {
    background-color: lightgray;
 }
@@ -214,5 +187,66 @@ h6{
     to   { opacity: 1; }
 }
 
+/*Google Maps API*/
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+         #map {
+             margin-left:10px;
+             width: 25%;
+             height: 200px;
+             position:center;
+             bottom: 10px;
+             padding-top: 5px;
+   /*background-color: grey;*/
+         }
+         
 
+         .controls {
+             margin-top: 10px;
+             border: 1px solid transparent;
+             border-radius: 2px 0 0 2px;
+             box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             height: 32px;
+             outline: none;
+             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+             color:black;
+         }
+
+         #pac-input {
+             background-color: ghostwhite;
+             font-family: Roboto;
+             font-size: 15px;
+             font-weight: 300;
+             margin-left: 12px;
+             padding: 0 11px 0 13px;
+             text-overflow: ellipsis;
+             width: 200px;
+         }
+
+             #pac-input:focus {
+                 border-color: #4d90fe;
+             }
+
+         .pac-container {
+             font-family: Roboto;
+         }
+
+         #type-selector {
+             color: #fff;
+             background-color: #4d90fe;
+             padding: 5px 11px 0px 11px;
+         }
+
+             #type-selector label {
+                 font-family: Roboto;
+                 font-size: 13px;
+                 font-weight: 300;
+             }
+
+         #target {
+             width: 345px;
+         }
+    
+/*End Google Maps API*/
 
