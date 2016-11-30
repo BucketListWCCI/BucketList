@@ -101,6 +101,9 @@ namespace BucketList.Controllers
         {
             if (ModelState.IsValid)
             {
+                UserManager<ApplicationUser> UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+                userList.ApplicationUserId = currentUser.Id;
                 db.Entry(userList).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
